@@ -87,4 +87,4 @@ class Parser:
             return ftp_df
 
         ftp_df = parse_ftp_banner(bannerdf_dict)
-        print(ftp_df.head())
+        

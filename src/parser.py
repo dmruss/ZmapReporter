@@ -51,6 +51,9 @@ class Parser:
 
         returns: dict of dataframes
         '''
+
+        banner_dfs = {}
+
         def parse_ftp_banner(bannerdf_dict):
             ftp_software_types = ['cerberus', 'completeftp', 'crushftp', 'filezilla', 'microsoft', 'sysax', 'war', 'giftpd', 'proftpd', 'pure-ftpd', 'vsftpd', 'wu-ftpd']
             ftp_responses = bannerdf_dict['ftp']
@@ -88,3 +91,8 @@ class Parser:
 
         ftp_df = parse_ftp_banner(bannerdf_dict)
         
+        banner_dfs['ftp'] = ftp_df
+
+
+
+        return banner_dfs

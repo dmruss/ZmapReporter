@@ -42,12 +42,49 @@ class Parser:
             print(grab_type)
             print(bannerdf_dict[grab_type][0])
             print()
+        return bannerdf_dict
 
     
-    def parse_banners(self):
+    def parse_banners(self, bannerdf_dict):
         '''
         Parse loaded banners to pandas dataframes with select features
 
         returns: dict of dataframes
         '''
+        def parse_ftp_banner(bannerdf_dict):
+            ftp_software_types = ['cerberus', 'completeftp', 'crushftp', 'filezilla', 'microsoft', 'sysax', 'war', 'giftpd', 'proftpd', 'pure-ftpd', 'vsftpd', 'wu-ftpd']
+            ftp_responses = bannerdf_dict['ftp']
+            ip_addresses = []
+            success = []
+            software_names = []
+            for resp in ftp_responses:
+                ip_addresses.append(resp['ip'])
+                status = resp['data']['ftp']['status']
+                if status == 'success':
+                    success.append(True)
+                    #attempt to find software name in banner
+                    try:
+                        banner = resp['data']['ftp']['result']['banner'].lower()
+                        found = False
+                        for sw_name in ftp_software_types:
+                            if sw_name in banner:
+                                software_names.append(sw_name)
+                                found=True
+                                break
+                        if not found:
+                            software_names.append('Not Found')
+                    except Exception as e:
+                        print(e)
+                        software_names.append(None)
+                else:
+                    software_names.append(None)
+                    success.append(False)
+            ftp_df = pd.DataFrame()
+            ftp_df['ip_address'] = ip_addresses
+            ftp_df = ftp_df.set_index('ip_address')
+            ftp_df['success'] = success
+            ftp_df['ftp_software'] = software_names
+            return ftp_df
 
+        ftp_df = parse_ftp_banner(bannerdf_dict)
+        print(ftp_df.head())

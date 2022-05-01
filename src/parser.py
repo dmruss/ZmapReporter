@@ -1,5 +1,6 @@
 #import to zmapReporter
 #parse banner outputs to dataframes
+from http import server
 import pandas as pd
 import numpy as np
 import os
@@ -211,23 +212,57 @@ class Parser:
             tls_df['ip_address'] = ip_addresses
             tls_df = tls_df.set_index('ip_address')
             tls_df['success'] = success
-            print(version)
             tls_df['version'] = version
             tls_df['cert_issuer'] = cert_issuer
             tls_df['company'] = company
-            print(tls_df.iloc[0])
             return tls_df
+
+
+        def parse_mysql_banner(bannerdf_dict):
+            mysql_responses = bannerdf_dict['mysql']
+            ip_addresses = []
+            success = []
+            server_versions = []
+            contains_cert = []
+            for resp in mysql_responses:
+                ip_addresses.append(resp['ip'])
+                status = resp['data']['mysql']['status']
+                if status == 'success':
+                    success.append(True)
+                    try:
+                        server_version = resp['data']['mysql']['result']['server_version']
+                        server_versions.append(server_version)
+                    except:
+                        server_versions.append(None)
+                    try:
+                        cert = resp['data']['mysql']['result']['tls']
+                        contains_cert.append(True)
+                    except:
+                        contains_cert.append(False)
+                else:
+                    success.append(False)
+                    server_versions.append(None)
+                    contains_cert.append(False)
+            mysql_df = pd.DataFrame()
+            mysql_df['ip_address'] = ip_addresses
+            mysql_df = mysql_df.set_index('ip_address')
+            mysql_df['success'] = success
+            mysql_df['server_version'] = server_versions
+            mysql_df['certificate'] = contains_cert
+            return mysql_df
 
         #run parsers and add to dictionary
         http_df = parse_http_banner(bannerdf_dict)
         ssh_df = parse_ssh_banner(bannerdf_dict)
         ftp_df = parse_ftp_banner(bannerdf_dict)    
         tls_df = parse_tls_banner(bannerdf_dict)    
+        mysql_df = parse_mysql_banner(bannerdf_dict)    
+
         banner_dfs['ftp'] = ftp_df
         banner_dfs['http'] = http_df
         banner_dfs['ssh'] = ssh_df
         banner_dfs['tls'] = tls_df
-
+        banner_dfs['mysql'] = mysql_df
 
 
         return banner_dfs

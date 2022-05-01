@@ -22,6 +22,7 @@ class TestParser(unittest.TestCase):
         self.assertEqual(len(parsed_banners['http']), 50)
         self.assertEqual(len(parsed_banners['ssh']), 50)
         self.assertEqual(len(parsed_banners['tls']), 50)
+        self.assertEqual(len(parsed_banners['mysql']), 50)
 
 if __name__ == '__main__':
     unittest.main()

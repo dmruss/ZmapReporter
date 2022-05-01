@@ -89,9 +89,74 @@ class Parser:
             ftp_df['ftp_software'] = software_names
             return ftp_df
 
-        ftp_df = parse_ftp_banner(bannerdf_dict)
-        
+        def parse_http_banner(bannerdf_dict):
+            http_responses = bannerdf_dict['http']
+            ip_addresses = []
+            success = []
+            server = []
+            x_powered_by = []
+            status_code = []
+            redirect = []
+            redirect_location = []
+            for resp in http_responses:
+                ip_addresses.append(resp['ip'])
+                status = resp['data']['http']['status']
+                if status == 'success':
+                    success.append(True)
+                    try:
+                        server_name = resp['data']['http']['result']['response']['headers']['server'][0]
+                        server.append(server_name)
+                    except:
+                        server.append(None)
+                    try:
+                        x_name = resp['data']['http']['result']['headers']['x_powered_by']
+                        x_powered_by.append(x_name)
+                    except:
+                        x_powered_by.append(None)
+                    try:
+                        code = resp['data']['http']['result']['response']['status_code']
+                        status_code.append(code)
+                    except:
+                        status_code.append(None)
+                    try:
+                        redirect_chain = resp['data']['http']['result']['redirect_response_chain']
+                        redirect.append(True)
+                        try:
+                            location = redirect_chain[0]['headers']['location'][0]
+                            redirect_location.append(location)
+                        except:
+                            redirect_location.append(None)
+                    except:
+                        redirect.append(False)
+                        redirect_location.append(False)
+
+                else:
+                    success.append(False)
+                    server.append(None)
+                    x_powered_by.append(None)
+                    status_code.append(None)
+                    redirect.append(None)
+                    redirect_location.append(None)
+
+            http_df = pd.DataFrame()
+            http_df['ip_address'] = ip_addresses
+            http_df = http_df.set_index('ip_address')
+            http_df['success'] = success
+            http_df['server'] = server
+            http_df['x_powered_by'] = x_powered_by
+            http_df['status_code'] = status_code
+            http_df['redirect'] = redirect
+            http_df['redirect_location'] = redirect_location
+            print(http_df.iloc[0])
+            return http_df
+
+
+
+
+        http_df = parse_http_banner(bannerdf_dict)
+        ftp_df = parse_ftp_banner(bannerdf_dict)        
         banner_dfs['ftp'] = ftp_df
+        banner_dfs['http'] = http_df
 
 
 

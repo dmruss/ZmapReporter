@@ -13,6 +13,8 @@ class Parser:
 
         returns: loaded banners
         '''
+
+        #load http, ssh,, ftp, imap, telnet, tls, smtp, and mysql banner.json files
     
     def parse_banners(self):
         '''

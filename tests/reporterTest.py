@@ -18,7 +18,9 @@ class TestParser(unittest.TestCase):
         parser = Parser('/home/guest/Desktop/zmaptemp/port80grabs/202205011231_p80/')
         loaded_banners = parser.load_banners()
         parsed_banners = parser.parse_banners(loaded_banners)
-        self.assertEqual(len(parsed_banners['ftp']),50)
+        self.assertEqual(len(parsed_banners['ftp']), 50)
+        self.assertEqual(len(parsed_banners['http']), 50)
+        self.assertEqual(len(parsed_banners['ssh']), 50)
 
 if __name__ == '__main__':
     unittest.main()

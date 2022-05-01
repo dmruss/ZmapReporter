@@ -135,7 +135,7 @@ class Parser:
                     server.append(None)
                     x_powered_by.append(None)
                     status_code.append(None)
-                    redirect.append(None)
+                    redirect.append(False)
                     redirect_location.append(None)
 
             http_df = pd.DataFrame()
@@ -147,16 +147,40 @@ class Parser:
             http_df['status_code'] = status_code
             http_df['redirect'] = redirect
             http_df['redirect_location'] = redirect_location
-            print(http_df.iloc[0])
             return http_df
 
+        def parse_ssh_banner(bannerdf_dict):
+            ssh_responses = bannerdf_dict['ssh']
+            ip_addresses = []
+            success = []
+            software = []
+            for resp in ssh_responses:
+                ip_addresses.append(resp['ip'])
+                status = resp['data']['ssh']['status']
+                if status == 'success':
+                    success.append(True)
+                    try:
+                        sw = resp['data']['ssh']['result']['server_id']['software']
+                        software.append(sw)
+                    except:
+                        software.append(None)
+                else:
+                    success.append(False)
+                    software.append(None)
+            ssh_df = pd.DataFrame()
+            ssh_df['ip_address'] = ip_addresses
+            ssh_df = ssh_df.set_index('ip_address')
+            ssh_df['success'] = success
+            ssh_df['software'] = software
+            return ssh_df
 
-
-
+        #run parsers and add to dictionary
         http_df = parse_http_banner(bannerdf_dict)
+        ssh_df = parse_ssh_banner(bannerdf_dict)
         ftp_df = parse_ftp_banner(bannerdf_dict)        
         banner_dfs['ftp'] = ftp_df
         banner_dfs['http'] = http_df
+        banner_dfs['ssh'] = ssh_df
 
 
 

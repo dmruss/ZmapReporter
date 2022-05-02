@@ -5,7 +5,8 @@ import pandas as pd
 import numpy as np
 import os
 import json
-
+from ip2geotools.databases.noncommercial import DbIpCity
+import time
 
 class Parser:
 
@@ -251,18 +252,50 @@ class Parser:
             mysql_df['certificate'] = contains_cert
             return mysql_df
 
+        def query_ip_geo(bannerdf_dict):
+            http_responses = bannerdf_dict['http']
+            ip_addresses = []
+            city = []
+            lat = []
+            long = []
+            for resp in http_responses:
+                ip = resp['ip']
+                ip_addresses.append(ip)
+                try:
+                    response = DbIpCity.get(ip, api_key='free')
+                    time.sleep(10)
+                    city.append(response.city)
+                    lat.append(response.latitude)
+                    long.append(response.longitude)
+                except:
+                    city.append(None)
+                    lat.append(None)
+                    long.append(None)
+            geo_df = pd.DataFrame()
+            geo_df['ip_address'] = ip_addresses
+            geo_df = geo_df.set_index('ip_address')
+            geo_df['city'] = city
+            geo_df['latitude'] = lat
+            geo_df['longitude'] = long
+            print(geo_df.iloc[0])
+            return geo_df
+
+
         #run parsers and add to dictionary
         http_df = parse_http_banner(bannerdf_dict)
         ssh_df = parse_ssh_banner(bannerdf_dict)
         ftp_df = parse_ftp_banner(bannerdf_dict)    
         tls_df = parse_tls_banner(bannerdf_dict)    
-        mysql_df = parse_mysql_banner(bannerdf_dict)    
+        mysql_df = parse_mysql_banner(bannerdf_dict) 
+        geo_df = query_ip_geo(bannerdf_dict)
 
         banner_dfs['ftp'] = ftp_df
         banner_dfs['http'] = http_df
         banner_dfs['ssh'] = ssh_df
         banner_dfs['tls'] = tls_df
         banner_dfs['mysql'] = mysql_df
+        banner_dfs['geo'] = geo_df
+        banner_dfs['geo'].to_csv('./tests/data/geotest.csv')
 
 
         return banner_dfs

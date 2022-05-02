@@ -21,7 +21,7 @@ def helpMes():
 
 def main():
     exitCode = 0;
-    os.system("chmod +x setup.sh")
+    os.system("sudo chmod +x setup.sh")
     subprocess.run("./setup.sh")
     print(
         "Welcome to ZmapReporter, please make a selection from the available options in the main menu and press enter.\n")

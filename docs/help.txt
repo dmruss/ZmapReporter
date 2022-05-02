@@ -1,1 +1,6 @@
-"Welcome to ZmapReporter, *insert app description*. Start by making a selection from the main menu and pressing 'enter'. Press the 'r' key to run the ZmapReporter, which will take you to the next page. Once the reporter has started, it will prompt you to inpuyt your desired port number and sample size. Once you have provided the inputs, they will be sent to Zmap and the scan will begin. After the scan has been completed, the results will be ouput to the docs file in the main ZmapReporter, ready for review. To return to this manual, press the 'h' key and then 'enter' at the main menu. Press the 'e' key and then enter at the main menu to exit the program.
+Welcome to ZmapReporter, *insert app description*. Start by making a selection from the main menu and pressing 
+'enter'. Press the 'r' key to run the ZmapReporter, which will take you to the next page. Once the reporter has 
+started, it will prompt you to inpuyt your desired port number and sample size. Once you have provided the 
+inputs, they will be sent to Zmap and the scan will begin. After the scan has been completed, the results will 
+be ouput to the docs file in the main ZmapReporter, ready for review. To return to this manual, press the 'h' 
+key and then 'enter' at the main menu. Press the 'e' key and then enter at the main menu to exit the program.

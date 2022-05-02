@@ -5,7 +5,8 @@
 import os
 import subprocess
 import sys
-from src.zscript import runZmap
+from src/zscript import runZmap
+from 
 
 
 def runRep():
@@ -15,7 +16,7 @@ def runRep():
 
 
 def helpMes():
-    helpfile=("helpMan.txt")
+    helpfile=("docs/help.txt")
     helpMessage = helpfile.read()
     print("\n" + helpMessage)
     x = input("Press enter to return to the main menu.\n")

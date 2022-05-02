@@ -5,11 +5,13 @@
 import os
 import subprocess
 import sys
+from zscript import runZmap
 
 
 def runRep():
     p = input("\nInput Port Number: ")
     s = input("Input Sample Size: ")
+    runZmap(p, s)
 
 
 def helpMes():
@@ -43,3 +45,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

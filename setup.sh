@@ -1,4 +1,4 @@
-#! /bin.sh
+#! /bin/sh
 
 #setup file
 sudo apt-get update

@@ -295,7 +295,5 @@ class Parser:
         banner_dfs['tls'] = tls_df
         banner_dfs['mysql'] = mysql_df
         banner_dfs['geo'] = geo_df
-        banner_dfs['geo'].to_csv('./tests/data/geotest.csv')
-
-
+    
         return banner_dfs

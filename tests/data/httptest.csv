@@ -1,0 +1,51 @@
+ip_address,success,server,x_powered_by,status_code,redirect,redirect_location
+104.65.11.193,True,AkamaiGHost,,400.0,False,False
+38.63.157.224,True,nginx,,403.0,False,False
+165.206.203.170,False,,,,False,
+24.28.186.25,True,nginx,,200.0,False,False
+91.102.136.236,False,,,,False,
+69.73.141.21,True,Apache,,200.0,False,False
+52.172.176.94,False,,,,False,
+8.210.43.20,True,Apache,,200.0,False,False
+74.118.6.80,False,,,,False,
+140.143.114.126,True,Apache-Coyote/1.1,,200.0,False,False
+83.9.226.224,False,,,,False,
+104.149.177.162,True,Microsoft-HTTPAPI/2.0,,403.0,False,False
+92.118.228.18,True,Tengine,,200.0,False,False
+104.224.236.221,True,nginx,,404.0,False,False
+23.192.174.230,True,AkamaiGHost,,400.0,False,False
+198.1.123.24,True,Apache,,200.0,False,False
+198.20.148.244,True,Apache/2.4.25 (Debian),,200.0,False,False
+108.138.173.35,True,CloudFront,,403.0,False,False
+67.213.8.184,True,echostar,,404.0,False,False
+50.211.233.6,True,Webs,,200.0,False,False
+74.205.13.107,True,Microsoft-IIS/10.0,,200.0,False,False
+104.112.20.91,True,AkamaiGHost,,400.0,False,False
+27.120.126.101,True,Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips,,403.0,False,False
+72.27.93.93,True,micro_httpd,,401.0,False,False
+52.222.168.34,True,CloudFront,,403.0,False,False
+172.104.234.131,True,nginx/1.10.3 (Ubuntu),,200.0,False,False
+180.215.155.157,True,nginx,,200.0,False,False
+52.48.201.80,True,,,403.0,False,False
+160.153.129.187,True,Apache,,403.0,False,False
+83.206.139.100,True,Apache/2.2.16 (Debian),,403.0,False,False
+54.36.185.141,True,Apache/2.4.25 (Debian),,200.0,False,False
+47.243.181.67,True,nginx,,403.0,False,False
+156.255.43.207,True,openresty,,503.0,False,False
+184.85.133.196,True,AkamaiGHost,,400.0,False,False
+43.155.102.198,True,Caddy,,200.0,False,False
+203.190.243.240,True,nginx/1.12.1,,200.0,False,False
+168.206.199.246,False,,,,False,
+70.63.12.186,True,lighttpd/1.4.55,,200.0,False,False
+118.214.42.218,True,AkamaiGHost,,400.0,False,False
+96.7.190.159,True,AkamaiGHost,,400.0,False,False
+66.180.56.27,True,Apache,,200.0,False,False
+107.172.41.86,True,squid,,400.0,False,False
+206.233.176.75,False,,,,False,
+122.117.209.175,True,web,,200.0,False,False
+101.35.170.198,True,nginx,,200.0,False,False
+23.251.33.115,False,,,,False,
+139.224.213.63,False,,,,False,
+121.197.127.169,False,,,,False,
+123.60.68.13,False,,,,False,
+154.208.159.92,False,,,,False,

@@ -33,10 +33,8 @@ class TestReporter(unittest.TestCase):
     def test_geo(self):
         geo_test_data = pd.read_csv('./tests/data/geotest.csv', index_col='ip_address')
         banner_dfs = {'geo': geo_test_data}
-        # parser = Parser('/home/guest/Desktop/zmaptemp/port80grabs/202205011231_p80/')
-        # loaded_banners = parser.load_banners()
-        # parsed_banners = parser.parse_banners(loaded_banners)
-        plot_map(banner_dfs)
+        plotter = Plotter('./tests/data/output')
+        plotter.plot_map(banner_dfs)
         self.assertEqual(1,0)
 
 

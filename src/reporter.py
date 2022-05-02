@@ -3,7 +3,6 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
 import geopandas as gpd
 from shapely.geometry import Point, Polygon
@@ -40,11 +39,24 @@ class Plotter:
         col = 0
         for grab_type in banner_dfs.keys():
             if grab_type == 'geo': continue
-            ax[col].pie(banner_dfs[grab_type]['success'].value_counts())
+            ax[col].pie(banner_dfs[grab_type]['success'].value_counts(), labels=banner_dfs[grab_type]['success'].value_counts().keys(), autopct='%.2f')
             ax[col].set_title(grab_type)
             col += 1
         self.pp.savefig()
-        plt.show()
+        # plt.show()
+
+    def plot_http_server(self, banner_dfs):
+        fig, ax = plt.subplots(figsize=(15,15))
+        http_df = banner_dfs['http']['server'].dropna()
+        plt.hist(http_df)
+        self.pp.savefig()
+
+    def plot_ssh_software(self, banner_dfs):
+        ssh_df = banner_dfs['ssh']
+        fig, ax = plt.subplots(figsize=(15,15))
+        plt.hist(ssh_df['software'].dropna())
+        self.pp.savefig()
+
        
 
     def close_pp(self):
@@ -53,4 +65,6 @@ class Plotter:
     def report(self, banner_dfs):
         self.plot_map(banner_dfs)
         self.plot_success(banner_dfs)
+        self.plot_http_server(banner_dfs)
+        self.plot_ssh_software(banner_dfs)
         self.close_pp()

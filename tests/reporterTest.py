@@ -53,7 +53,7 @@ class TestReporter(unittest.TestCase):
         for table in test_tables:
             test_data = pd.read_csv('./tests/data/'+table+'test.csv', index_col='ip_address')
             banner_dfs[table] = test_data
-        plotter = Plotter('./tests/data/output')
+        plotter = Plotter('./tests/data/output', 80, 50)
         plotter.report(banner_dfs)
         self.assertEqual(1,0)
 

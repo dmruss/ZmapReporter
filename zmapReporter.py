@@ -9,9 +9,15 @@ from src/zscript import runZmap
 
 
 def runRep():
-    p = input("\nInput Port Number: ")
-    s = input("Input Sample Size: ")
-    runZmap(p, s)
+    ex = 0
+    while ex == 0:
+        p = input("\nInput Port Number: ")
+        s = input("Input Sample Size: ")
+        if isinstance(p, int) && isinstance(s, int):
+            ex = 1
+            runZmap(p, s)
+        else:
+            print("Error: Invalid input\n")
 
 
 def helpMes():
@@ -22,10 +28,10 @@ def helpMes():
 
 
 def main():
-    exitCode = 0;
+    ex = 0;
     mkdir "output"
     print("Welcome to ZmapReporter, please make a selection from the available options in the main menu and press enter.\n")
-    while exitCode == 0:
+    while ex == 0:
         print("Main Menu")
         print("Run Reporter (r)")
         print("Help (h)")

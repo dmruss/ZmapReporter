@@ -11,7 +11,7 @@ pip install -r requirements.txt
 
 ##also install zmap and zgrab
 sudo apt-get install zmap
-sudo apt install golang-go
+sudo apt-get install golang-go
 mkdir ZmapReporter
 cd ZmapReporter
 sudo go get github.com/zmap/zgrab2

@@ -15,14 +15,16 @@ def runRep():
 
 
 def helpMes():
-    print("\nWelcome to ZmapReporter, *insert description of our app*. Start by *insert instructions for operation*. ")
+    helpfile=("helpMan.txt")
+    helpMessage = helpfile.read()
+    print("\n" + helpMessage)
     x = input("Press enter to return to the main menu.\n")
 
 
 def main():
     exitCode = 0;
-    print(
-        "Welcome to ZmapReporter, please make a selection from the available options in the main menu and press enter.\n")
+    mkdir "output"
+    print("Welcome to ZmapReporter, please make a selection from the available options in the main menu and press enter.\n")
     while exitCode == 0:
         print("Main Menu")
         print("Run Reporter (r)")

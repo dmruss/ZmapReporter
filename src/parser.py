@@ -1,8 +1,6 @@
 #import to zmapReporter
 #parse banner outputs to dataframes
-from http import server
 import pandas as pd
-import numpy as np
 import os
 import json
 from ip2geotools.databases.noncommercial import DbIpCity

@@ -1,14 +1,11 @@
 #import to zmapReporter
 #create viz from dataframes
 
-import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import geopandas as gpd
 import seaborn as sns
 from shapely.geometry import Point
 from matplotlib.backends.backend_pdf import PdfPages
-from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 class Plotter:
@@ -55,7 +52,7 @@ class Plotter:
         # fig, ax = plt.subplots(1, 5)
         # fig.set_size_inches(15, 5)
         # fig.tight_layout()
-        col = 0
+        col = 1
         for grab_type in banner_dfs.keys():
             if grab_type == 'geo': continue
             ax = plt.subplot2grid(self.grid_size, (2,col))
@@ -126,6 +123,7 @@ class Plotter:
             else:
                 vals.append(0)
         ax.bar(nmap_dict.keys(), height = vals)
+        ax.set_title('Malware Scan Detection')
 
 
     def close_pp(self):

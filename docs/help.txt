@@ -1,9 +1,15 @@
-ZmapReporter 
-A wrapper tool combining Zmap, Zgrab, and Nmap for network discovery, malware detection, and dataset generation.
+ZmapReporter  -  https://github.com/dmruss/ZmapReporter
+A wrapper tool combining Zmap, Zgrab, and Nmap for network discovery, malware 
+detection, and dataset generation.
 
 Usage:
 
-(r) - This will request parameters to begin a scan.  Required parameters are the port number, the sample size of IP addresses to locate, and the scan size.  The scan size is the number of IP addresses to perform malware script scanning on.  This number is limited due to the high network cost of perfroming malware scans.  Small scans are 1/5 the sample size, medium scans are 1/3 the sample size, and large scans are 1/2 the sample size.
+(r) - This will request parameters to begin a scan.  Required parameters are 
+      the port number, the sample size of IP addresses to locate, and the scan 
+      size.  The scan size is the number of IP addresses to perform malware 
+      script  scanning on.  This number is limited due to the high network cost 
+      of perfroming malware scans.  Small scans are 1/5 the sample size, medium 
+      scans are 1/3 the sample size, and large scans are 1/2 the sample size.
 
     Parameter range:
         ports - Integer 1 - 65535.
@@ -14,19 +20,40 @@ Usage:
 
 (e) - Exit the program.
 
-Eprogram description
 
-#setup
+Accessing outputs:
 
+    Outputs will be written to the 'outputs' folder inside the root directory.
+    The example below shows the output for a scan of port 80 on May 3, 2022 at 5:20 pm.
 
-
-
-
-
-Start by making a selection from the main menu and pressing 
-'enter'. 
-Press the 'r' key to run the ZmapReporter, which will take you to the next page. Once the reporter has 
-started, it will prompt you to inpuyt your desired port number and sample size. Once you have provided the 
-inputs, they will be sent to Zmap and the scan will begin. After the scan has been completed, the results will 
-be ouput to the docs file in the main ZmapReporter, ready for review. To return to this manual, press the 'h' 
-key and then 'enter' at the main menu. Press the 'e' key and then enter at the main menu to exit the program.
+        Root
+        ├── docs
+        ├── LICENSE
+        ├── output
+        │   └── 20220503-1720-80
+        │       ├── banners   <----------banner based datasets
+        │       │   ├── ftp.csv
+        │       │   ├── geo.csv
+        │       │   ├── http.csv
+        │       │   ├── mysql.csv
+        │       │   ├── ssh.csv
+        │       │   └── tls.csv
+        │       ├── final_output <-------contains report pdf output
+        │       ├── nmapscans <----------malware scan datasets
+        │       └── temp
+        │           ├── banners
+        │           │   ├── ftp.json
+        │           │   ├── http.json
+        │           │   ├── mysql.json
+        │           │   ├── smtp.json
+        │           │   ├── ssh.json
+        │           │   └── tls.json
+        │           ├── ipaddresses.csv <-list of ip addresses discovered 
+        │           └── nmapscans
+        │               └── http.txt
+        ├── README.md
+        ├── requirements.txt
+        ├── setup.sh
+        ├── src
+        ├── tests
+        └── zmapReporter.py

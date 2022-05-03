@@ -1,0 +1,21 @@
+# Nmap 7.92 scan initiated Tue May  3 17:21:46 2022 as: nmap --host-timeout 2m -sV --script=http-malware-host -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1720-80/temp/nmapscans/http.txt --append-output 204.197.249.30
+Nmap scan report for 204.197.249.30
+Host is up (0.093s latency).
+Not shown: 986 filtered tcp ports (no-response), 4 filtered tcp ports (host-unreach)
+PORT    STATE  SERVICE  VERSION
+21/tcp  open   ftp      Pure-FTPd
+26/tcp  open   smtp     Exim smtpd 4.94.2
+53/tcp  closed domain
+80/tcp  open   http     Apache httpd
+|_http-malware-host: Host appears to be clean
+110/tcp open   pop3     Dovecot pop3d
+143/tcp open   imap     Dovecot imapd
+443/tcp open   ssl/http Apache httpd
+|_http-malware-host: Host appears to be clean
+587/tcp open   smtp     Exim smtpd 4.94.2
+993/tcp open   ssl/imap Dovecot imapd
+995/tcp open   ssl/pop3 Dovecot pop3d
+Service Info: Host: host.eternitysites.com
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 17:22:53 2022 -- 1 IP address (1 host up) scanned in 67.52 seconds

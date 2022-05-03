@@ -1,0 +1,2 @@
+# Nmap 7.92 scan initiated Tue May  3 17:22:53 2022 as: nmap -sV --host-timeout 2m -script=smtp-strangeport -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1720-80/temp/nmapscans/smtp.txt --append-output 204.197.249.30
+# Nmap done at Tue May  3 17:22:56 2022 -- 1 IP address (0 hosts up) scanned in 3.22 seconds

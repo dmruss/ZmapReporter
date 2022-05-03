@@ -26,12 +26,12 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 source .bashrc
 
-pf=$(find $HOME/etc/ -type d -name "zmap")
+pf=$(find /usr/share/doc/ -type d -name "zmap")
 cd $pf
 echo "installing zgrab2 *************************************************************"
 sudo go install github.com/zmap/zgrab2@latest
 cd || exit
-pF=$(find $HOME/etc/ -type d -name "zgrab2@v0.1.7")
+pF=$(find /usr/share/doc/ -type d -name "zgrab2@v0.1.7")
 echo "**************************** " + $pF + " ********************************"
 cd $pF || exit
 sudo go get $GOPATH github.com/stretchr/testify

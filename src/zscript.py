@@ -64,8 +64,10 @@ class ZmapReporter:
         scan_dict = nmap_parser.parse_nmap_scans()
         for scan_type in scan_dict.keys():
             scan_dict[scan_type].to_csv(self.working_dir+'/nmapscans/{}.csv'.format(scan_type))
+        return scan_dict
+
+    def plot_outputs(self, banner_dfs, nmap_dict):
+        a_plotter = reporter.Plotter(self.working_dir+'/final_output', self.port, self.sample)
+        a_plotter.report(banner_dfs, nmap_dict)
 
 
-def runZmap(a, b):
-    os.system("cd")
-    os.system("sudo zmap -p " + str(a) + " -N " + str(b) + "| ztee maybeSSH.csv | ~/go/pkg/mod/github.com/zmap/zgrab2@v0.1.7/zgrab2 ssh -o banners.json")

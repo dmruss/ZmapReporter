@@ -57,12 +57,20 @@ class Plotter:
             if grab_type == 'geo': continue
             ax = plt.subplot2grid(self.grid_size, (2,col))
             labels = banner_dfs[grab_type]['success'].value_counts().keys()
-            if labels[1] == True: 
-                labels = ['No Connection', 'Connected']
-                values = banner_dfs[grab_type]['success'].value_counts()
+            if len(labels) > 1:
+                if labels[1] == True: 
+                    labels = ['No Connection', 'Connected']
+                    values = banner_dfs[grab_type]['success'].value_counts()
+                else: 
+                    labels = ['No Connection', 'Connected']
+                    values = [banner_dfs[grab_type]['success'].value_counts()[1], banner_dfs[grab_type]['success'].value_counts()[0]]
             else: 
-                labels = ['No Connection', 'Connected']
-                values = [banner_dfs[grab_type]['success'].value_counts()[1], banner_dfs[grab_type]['success'].value_counts()[0]]
+                if labels[0] == True:
+                    labels = ['Connected', 'No Connection']
+                    values = [banner_dfs[grab_type]['success'].value_counts()[0], 0]
+                else:
+                    labels = ['No Connection', 'Connected']
+                    values = [0, banner_dfs[grab_type]['success'].value_counts()[0]]     
             ax.pie(values, labels=labels, autopct='%.0f%%')
             
             ax.set_title('{} Percent Connection'.format(grab_type.upper()))

@@ -308,7 +308,8 @@ class Parser:
         geo_df = query_ip_geo(bannerdf_dict)
         geo_df = query_country(geo_df)
         # geo_df.to_csv('./tests/data/geotest.csv')
-        tls_df.to_csv('./tests/data/tlstest.csv')
+        # tls_df.to_csv('./tests/data/tlstest.csv')
+        self.ip_addresses = ftp_df.index
 
         banner_dfs['ftp'] = ftp_df
         banner_dfs['http'] = http_df
@@ -318,3 +319,206 @@ class Parser:
         banner_dfs['geo'] = geo_df
     
         return banner_dfs
+
+    def parse_nmap_scans(self):
+        input_dir = self.working_dir + '/nmapscans'
+        file_list = os.listdir(input_dir)
+
+        scan_dict = {}
+
+        def parse_http():
+            ip_addresses = []
+            zombies = []
+            
+            file_path = input_dir + '/http.txt'
+            with open(file_path, 'r') as f:
+                new_scan = True
+                appended = False  
+                for line in f:
+                    if line[0] == '#':
+                        if new_scan:
+                            ip_addresses.append(line.split(' ')[-1])
+                            new_scan = False
+                        elif not new_scan and appended == False:
+                            zombies.append(False)
+                            new_scan = True
+                    else:
+                        new_scan = False
+                    if not new_scan and not appended:
+                        #look for infected
+                        if 'infected' in line:
+                            zombies.append(True)
+                            appended = True
+            df = pd.DataFrame()
+            df['ip_address'] = ip_addresses
+            df['zombie'] = zombies
+            df = df.set_index('ip_address')
+            return df
+
+        def parse_smtp():
+            ip_addresses = []
+            possible_backdoor = []
+            
+            file_path = input_dir + '/smtp.txt'
+            with open(file_path, 'r') as f:
+                new_scan = True
+                appended = False  
+                for line in f:
+                    if line[0] == '#':
+                        if new_scan:
+                            ip_addresses.append(line.split(' ')[-1])
+                            new_scan = False
+                        elif not new_scan and appended == False:
+                            possible_backdoor.append(False)
+                            new_scan = True
+                    else:
+                        new_scan = False
+                    if not new_scan and not appended:
+                        #look for infected
+                        if 'malware' in line:
+                            possible_backdoor.append(True)
+                            appended = True
+            df = pd.DataFrame()
+            df['ip_address'] = ip_addresses
+            df['possible_backdoor'] = possible_backdoor
+            df = df.set_index('ip_address')
+            return df
+
+        def parse_smb():
+            ip_addresses = []
+            possible_backdoor = []
+            
+            file_path = input_dir + '/smb.txt'
+            with open(file_path, 'r') as f:
+                new_scan = True
+                appended = False  
+                for line in f:
+                    if line[0] == '#':
+                        if new_scan:
+                            ip_addresses.append(line.split(' ')[-1])
+                            new_scan = False
+                        elif not new_scan and appended == False:
+                            possible_backdoor.append(False)
+                            new_scan = True
+                    else:
+                        new_scan = False
+                    if not new_scan and not appended:
+                        #look for infected
+                        if 'VULNERABLE' in line:
+                            possible_backdoor.append(True)
+                            appended = True
+            df = pd.DataFrame()
+            df['ip_address'] = ip_addresses
+            df['backdoor'] = possible_backdoor
+            df = df.set_index('ip_address')
+            return df
+
+        def parse_proftp():
+            ip_addresses = []
+            backdoor = []
+            
+            file_path = input_dir + '/proftp.txt'
+            with open(file_path, 'r') as f:
+                new_scan = True
+                appended = False  
+                for line in f:
+                    if line[0] == '#':
+                        if new_scan:
+                            ip_addresses.append(line.split(' ')[-1])
+                            new_scan = False
+                        elif not new_scan and appended == False:
+                            backdoor.append(False)
+                            new_scan = True
+                    else:
+                        new_scan = False
+                    if not new_scan and not appended:
+                        #look for infected
+                        if 'backdoored' in line:
+                            backdoor.append(True)
+                            appended = True
+            df = pd.DataFrame()
+            df['ip_address'] = ip_addresses
+            df['backdoor'] = backdoor
+            df = df.set_index('ip_address')
+            return df
+
+        def parse_vsftp():
+            ip_addresses = []
+            backdoor = []
+            
+            file_path = input_dir + '/vsftp.txt'
+            with open(file_path, 'r') as f:
+                new_scan = True
+                appended = False  
+                for line in f:
+                    if line[0] == '#':
+                        if new_scan:
+                            ip_addresses.append(line.split(' ')[-1])
+                            new_scan = False
+                        elif not new_scan and appended == False:
+                            backdoor.append(False)
+                            new_scan = True
+                    else:
+                        new_scan = False
+                    if not new_scan and not appended:
+                        #look for infected
+                        if 'VULNERABLE' in line:
+                            backdoor.append(True)
+                            appended = True
+            df = pd.DataFrame()
+            df['ip_address'] = ip_addresses
+            df['backdoor'] = backdoor
+            df = df.set_index('ip_address')
+            return df
+
+        def parse_authspoof():
+            ip_addresses = []
+            spoofed = []
+            
+            file_path = input_dir + '/auth.txt'
+            with open(file_path, 'r') as f:
+                new_scan = True
+                appended = False  
+                for line in f:
+                    if line[0] == '#':
+                        if new_scan:
+                            ip_addresses.append(line.split(' ')[-1])
+                            new_scan = False
+                        elif not new_scan and appended == False:
+                            spoofed.append(False)
+                            new_scan = True
+                    else:
+                        new_scan = False
+                    if not new_scan and not appended:
+                        #look for infected
+                        if 'Spoofed' in line:
+                            spoofed.append(True)
+                            appended = True
+            df = pd.DataFrame()
+            df['ip_address'] = ip_addresses
+            df['backdoor'] = spoofed
+            df = df.set_index('ip_address')
+            return df
+
+        for file in file_list:
+            if file == 'http.txt':
+                http_df = parse_http()
+                scan_dict['http'] = http_df
+            elif file == 'smtp.txt':
+                smtp_df = parse_smtp()
+                scan_dict['smtp'] = smtp_df
+            elif file == 'smb.txt':
+                smb_df = parse_smb()
+                scan_dict['smb'] = smb_df
+            elif file == 'proftp.txt':
+                proftp_df = parse_proftp()
+                scan_dict['proftp'] = proftp_df
+            elif file == 'vsftp.txt':
+                vsftp_df = parse_vsftp()
+                scan_dict['vsftp'] = vsftp_df
+            elif file == 'auth.txt':
+                auth_df = parse_authspoof()
+                scan_dict['auth'] = auth_df
+    
+        return scan_dict
+            

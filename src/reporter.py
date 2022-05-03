@@ -17,8 +17,8 @@ class Plotter:
         self.output_dir = output_directory
         self.pp = PdfPages(self.output_dir+'/out.pdf')
         # self.fig, self.ax = plt.subplots(5,5,figsize=(50,50))
-        self.fig = plt.figure(figsize=(50,40))
-        self.grid_size = (6,5)
+        self.fig = plt.figure(figsize=(60,40))
+        self.grid_size = (6,8)
         plt.rcParams["font.size"] = "30"
         self.fig.suptitle('Zmap/Zgrab scan of port {} with sample size {}'.format(port, sample), fontsize=50)
         sns.set_style("whitegrid")
@@ -74,32 +74,46 @@ class Plotter:
 
     def plot_http_server(self, banner_dfs):
         # fig, ax = plt.subplots(figsize=(15,15))
-        ax = plt.subplot2grid(self.grid_size, (3,0), colspan=6)
+        ax = plt.subplot2grid(self.grid_size, (3,0), colspan=4)
         http_df = banner_dfs['http']['server'].dropna()
         ax.bar(http_df.value_counts().keys(), height=http_df.value_counts())
-        ax.set_title('Web Server Name Counts')
+        ax.set_title('Web Servers')
         plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right')
         # self.pp.savefig()
 
     def plot_ssh_software(self, banner_dfs):
         ssh_df = banner_dfs['ssh']
         # fig, ax = plt.subplots(figsize=(15,15))
-        ax = plt.subplot2grid(self.grid_size, (5,0), colspan=6)
+        ax = plt.subplot2grid(self.grid_size, (5,0), colspan=4)
         ax.bar(ssh_df['software'].dropna().value_counts().keys(), height=ssh_df['software'].dropna().value_counts())
-        ax.set_title('SSH Software Counts')
+        ax.set_title('SSH Servers')
         # self.pp.savefig()
 
     def plot_countries(self, banner_dfs):
         geo_df = banner_dfs['geo']
         ax = plt.subplot2grid(self.grid_size, (0,3), colspan=2, rowspan=2)
         ax.bar(geo_df['country'].value_counts().keys(), height=geo_df['country'].value_counts())
-        ax.set_title('Ip by Countries')
+        ax.set_title('Ip Address by Country')
         plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right')
 
+    def plot_ftp_software(self, banner_dfs):
+        ftp_df = banner_dfs['ftp']
+        ax = plt.subplot2grid(self.grid_size, (5,4), colspan=4)
+        ax.bar(ftp_df['ftp_software'].value_counts().keys(), height=ftp_df['ftp_software'].value_counts())
+        ax.set_title('FTP Servers')
+
+    def plot_tls_company(self, banner_dfs):
+        tls_df = banner_dfs['tls']
+        ax = plt.subplot2grid(self.grid_size, (3,4), colspan=4)
+        ax.bar(tls_df['company'].value_counts().keys(), height=tls_df['company'].value_counts())
+        ax.set_title('Company on TLS Certificate')
+        plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right')
+
+        
 
     def close_pp(self):
         self.fig.tight_layout()
-        self.fig.subplots_adjust(wspace=0, hspace=.6)
+        self.fig.subplots_adjust(wspace=0.5, hspace=.6)
         self.fig.subplots_adjust(top=.9)
         self.pp.savefig()
         self.pp.close()
@@ -110,4 +124,6 @@ class Plotter:
         self.plot_success(banner_dfs)
         self.plot_http_server(banner_dfs)
         self.plot_ssh_software(banner_dfs)
+        self.plot_ftp_software(banner_dfs)
+        self.plot_tls_company(banner_dfs)
         self.close_pp()

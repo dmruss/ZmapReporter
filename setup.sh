@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 #setup file
 sudo apt-get update
@@ -13,6 +13,9 @@ if neg in path:
 pip install -r requirements.txt
 
 ##also install zmap and zgrab
+path = which nmap
+if neg in path:
+  sudo apt-get install nmap
 path = which zmap
 if neg in path:
   sudo apt-get install zmap

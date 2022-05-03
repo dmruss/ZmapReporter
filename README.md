@@ -13,7 +13,7 @@ Zmap Reporter is a wrapper for the Zmap Internet Scanner which gives cyber secur
 
 Required: This program currently only runs on Unix based operating systems and was designed specifically for use with Kali Linux.
 
-![Scan Report](./tests/data/output/out.pdf)
+![Scan Report](./docs/exampleReport.png)
 
 ## Setup
 

@@ -1,2 +1,0 @@
-{"ip":"44.225.171.129","data":{"ftp":{"status":"connection-timeout","protocol":"ftp","timestamp":"2022-05-03T13:54:27-06:00","error":"dial tcp 44.225.171.129:21: i/o timeout"}}}
-{"ip":"207.246.53.66","data":{"ftp":{"status":"connection-timeout","protocol":"ftp","timestamp":"2022-05-03T13:54:27-06:00","error":"dial tcp 207.246.53.66:21: i/o timeout"}}}

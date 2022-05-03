@@ -1,2 +1,0 @@
-# Nmap 7.92 scan initiated Tue May  3 13:57:17 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1354-80/temp/nmapscans/auth.txt --append-output 44.225.171.129
-# Nmap done at Tue May  3 13:57:20 2022 -- 1 IP address (0 hosts up) scanned in 3.40 seconds

@@ -1,2 +1,0 @@
-{"ip":"44.194.246.95","data":{"ssh":{"status":"connection-timeout","protocol":"ssh","result":{},"timestamp":"2022-05-03T13:44:37-06:00","error":"dial tcp 44.194.246.95:22: i/o timeout"}}}
-{"ip":"70.97.238.142","data":{"ssh":{"status":"connection-timeout","protocol":"ssh","result":{},"timestamp":"2022-05-03T13:44:37-06:00","error":"dial tcp 70.97.238.142:22: i/o timeout"}}}

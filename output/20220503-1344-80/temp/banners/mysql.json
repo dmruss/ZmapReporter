@@ -1,2 +1,0 @@
-{"ip":"70.97.238.142","data":{"mysql":{"status":"connection-timeout","protocol":"mysql","result":null,"timestamp":"2022-05-03T13:44:27-06:00","error":"dial tcp 70.97.238.142:3306: i/o timeout"}}}
-{"ip":"44.194.246.95","data":{"mysql":{"status":"connection-timeout","protocol":"mysql","result":null,"timestamp":"2022-05-03T13:44:27-06:00","error":"dial tcp 44.194.246.95:3306: i/o timeout"}}}

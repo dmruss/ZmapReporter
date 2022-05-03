@@ -1,2 +1,0 @@
-{"ip":"167.99.88.164","data":{"smtp":{"status":"connection-timeout","protocol":"smtp","timestamp":"2022-05-03T15:03:47-06:00","error":"dial tcp 167.99.88.164:25: i/o timeout"}}}
-{"ip":"155.101.251.0","data":{"smtp":{"status":"connection-timeout","protocol":"smtp","timestamp":"2022-05-03T15:03:47-06:00","error":"dial tcp 155.101.251.0:25: i/o timeout"}}}

@@ -1,0 +1,11 @@
+# Nmap 7.92 scan initiated Tue May  3 13:14:11 2022 as: nmap --host-timeout 2m -sV --script=http-malware-host -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1312-80/temp/nmapscans/http.txt --append-output 109.111.160.163
+Nmap scan report for 163.160.111.109.sta.211.ru (109.111.160.163)
+Host is up (0.28s latency).
+Not shown: 993 filtered tcp ports (no-response), 5 filtered tcp ports (host-unreach)
+PORT   STATE  SERVICE    VERSION
+53/tcp closed domain
+80/tcp open   tcpwrapped
+|_http-malware-host: Host appears to be clean
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 13:15:52 2022 -- 1 IP address (1 host up) scanned in 100.71 seconds

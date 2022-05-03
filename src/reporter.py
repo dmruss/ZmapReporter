@@ -109,7 +109,24 @@ class Plotter:
         ax.set_title('Company on TLS Certificate')
         plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right')
 
-        
+    def plot_nmap_scans(self, nmap_dict):
+        ax = plt.subplot2grid(self.grid_size, (0,5), rowspan=2, colspan=3)
+        vals = []
+        for scan_type in nmap_dict.keys():
+            df = nmap_dict[scan_type]
+            counts = df[df.keys()[0]].value_counts()
+            print()
+            print(counts)
+            print()
+            if len(counts.keys()) > 1:
+                if counts.keys()[0] == True:
+                    vals.append(counts[0])
+                else:
+                    vals.append(counts[1])
+            else:
+                vals.append(0)
+        ax.bar(nmap_dict.keys(), height = vals)
+
 
     def close_pp(self):
         self.fig.tight_layout()
@@ -118,7 +135,7 @@ class Plotter:
         self.pp.savefig()
         self.pp.close()
 
-    def report(self, banner_dfs):
+    def report(self, banner_dfs, nmap_dict):
         self.plot_map(banner_dfs)
         self.plot_countries(banner_dfs)
         self.plot_success(banner_dfs)
@@ -126,4 +143,5 @@ class Plotter:
         self.plot_ssh_software(banner_dfs)
         self.plot_ftp_software(banner_dfs)
         self.plot_tls_company(banner_dfs)
+        self.plot_nmap_scans(nmap_dict)
         self.close_pp()

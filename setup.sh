@@ -1,35 +1,38 @@
 #!/bin/sh
 
 #setup file
-sudo apt-get update
+echo "Beginning Installation"
+#sudo apt-get update
 
 #install python
-notInst=" no "
-path=which python3
-if [[ $path == *"$notInst"* ]]
-  sudo apt-get install python3
+echo "installing python3 *************************************************************"
+sudo apt-get install python3
 
 #install python dependencies
 pip install -r requirements.txt
 
 ##also install zmap and zgrab
-path = which nmap
-if [[ $path == *"$notInst"* ]]
-  sudo apt-get install nmap
-path = which zmap
-if [[ $path == *"$notInst"* ]]
-  sudo apt-get install zmap
-path = which go
-if [[ $path == *"$notInst"* ]]
-  sudo apt-get install golang-go
+echo "installing nmap ****************************************************************"
+sudo apt-get install nmap
+
+echo "installing zmap ****************************************************************"
+sudo apt-get install zmap
+
+echo "installing go ******************************************************************"
+cd $HOME || exit
+sudo apt-get install -y golang-go
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+source .bashrc
+
+pf=$(find $HOME/etc/ -type d -name "zmap")
+cd $pf
+echo "installing zgrab2 *************************************************************"
+sudo go install github.com/zmap/zgrab2@latest
 cd || exit
-mkdir ZmapReporter
-cd ZmapReporter || exit
-#path = which zgrab2
-if [[ $path == *"$notInst"* ]]
-  sudo go get github.com/zmap/zgrab2
-cd || exit
-path = find ~ -type d -name "zgrab2@v0.1.7"
-cd $path || exit
-sudo go get github.com/stretchr/testify
-make
+pF=$(find $HOME/etc/ -type d -name "zgrab2@v0.1.7")
+echo "**************************** " + $pF + " ********************************"
+cd $pF || exit
+sudo go get $GOPATH github.com/stretchr/testify
+sudo make 

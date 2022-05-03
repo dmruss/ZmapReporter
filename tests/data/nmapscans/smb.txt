@@ -1,0 +1,280 @@
+# Nmap 7.92 scan initiated Tue May  3 09:54:43 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 104.65.11.193
+Nmap scan report for a104-65-11-193.deploy.static.akamaitechnologies.com (104.65.11.193)
+Host is up (0.053s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:54:50 2022 -- 1 IP address (1 host up) scanned in 6.87 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:54:50 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 38.63.157.224
+Nmap scan report for 38.63.157.224
+Host is up (0.055s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:54:53 2022 -- 1 IP address (1 host up) scanned in 3.31 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:54:53 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 24.28.186.25
+Nmap scan report for cpe-24-28-186-25.elp.res.rr.com (24.28.186.25)
+Host is up (0.11s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:54:57 2022 -- 1 IP address (1 host up) scanned in 3.74 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:54:57 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 69.73.141.21
+Nmap scan report for static-21-141-73-69.nocdirect.com (69.73.141.21)
+Host is up (0.10s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:54:59 2022 -- 1 IP address (1 host up) scanned in 1.93 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:54:59 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 8.210.43.20
+Nmap scan report for 8.210.43.20
+Host is up (0.21s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:02 2022 -- 1 IP address (1 host up) scanned in 3.03 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:02 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 140.143.114.126
+Nmap scan report for 140.143.114.126
+Host is up (0.21s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:05 2022 -- 1 IP address (1 host up) scanned in 2.69 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:05 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 104.149.177.162
+Nmap scan report for 104.149.177.162
+Host is up (0.047s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:05 2022 -- 1 IP address (1 host up) scanned in 0.77 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:05 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 92.118.228.18
+Nmap scan report for 92.118.228.18
+Host is up (0.049s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:06 2022 -- 1 IP address (1 host up) scanned in 0.88 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:06 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 104.224.236.221
+Nmap scan report for 104.224.236.221
+Host is up (0.048s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:08 2022 -- 1 IP address (1 host up) scanned in 1.31 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:08 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 23.192.174.230
+Nmap scan report for a23-192-174-230.deploy.static.akamaitechnologies.com (23.192.174.230)
+Host is up (0.057s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:09 2022 -- 1 IP address (1 host up) scanned in 0.87 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:09 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 198.1.123.24
+Nmap scan report for server.xcommunication.co.uk (198.1.123.24)
+Host is up (0.068s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:10 2022 -- 1 IP address (1 host up) scanned in 1.02 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:10 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 198.20.148.244
+Nmap scan report for mutable.seflux.com (198.20.148.244)
+Host is up (0.078s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:11 2022 -- 1 IP address (1 host up) scanned in 1.18 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:11 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 108.138.173.35
+Nmap scan report for server-108-138-173-35.dfw56.r.cloudfront.net (108.138.173.35)
+Host is up (0.083s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:12 2022 -- 1 IP address (1 host up) scanned in 1.50 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:12 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 67.213.8.184
+Nmap scan report for 67.213.8.184
+Host is up (0.094s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:14 2022 -- 1 IP address (1 host up) scanned in 1.87 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:14 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 50.211.233.6
+Nmap scan report for 50.211.233.6
+Host is up (0.10s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:16 2022 -- 1 IP address (1 host up) scanned in 1.38 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:16 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 74.205.13.107
+Nmap scan report for 74.205.13.107
+Host is up (0.10s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:17 2022 -- 1 IP address (1 host up) scanned in 1.45 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:17 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 104.112.20.91
+Nmap scan report for a104-112-20-91.deploy.static.akamaitechnologies.com (104.112.20.91)
+Host is up (0.11s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:19 2022 -- 1 IP address (1 host up) scanned in 1.76 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:19 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 27.120.126.101
+Nmap scan report for v-27-120-126-101.ub-freebit.net (27.120.126.101)
+Host is up (0.15s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:21 2022 -- 1 IP address (1 host up) scanned in 1.91 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:21 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 72.27.93.93
+Nmap scan report for 93-93-27-72-br1-dynamic-dsl.cwjamaica.com (72.27.93.93)
+Host is up (0.18s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:26 2022 -- 1 IP address (1 host up) scanned in 4.70 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:26 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 52.222.168.34
+Nmap scan report for server-52-222-168-34.cdg52.r.cloudfront.net (52.222.168.34)
+Host is up (0.19s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:28 2022 -- 1 IP address (1 host up) scanned in 2.77 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:28 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 172.104.234.131
+Nmap scan report for frozenspire.com (172.104.234.131)
+Host is up (0.19s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:31 2022 -- 1 IP address (1 host up) scanned in 2.60 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:31 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 180.215.155.157
+Nmap scan report for 180.215.155.157
+Host is up (0.21s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:36 2022 -- 1 IP address (1 host up) scanned in 4.64 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:36 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 52.48.201.80
+Nmap scan report for ec2-52-48-201-80.eu-west-1.compute.amazonaws.com (52.48.201.80)
+Host is up (0.20s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:38 2022 -- 1 IP address (1 host up) scanned in 2.45 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:38 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 160.153.129.187
+Nmap scan report for ip-160-153-129-187.ip.secureserver.net (160.153.129.187)
+Host is up (0.20s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:41 2022 -- 1 IP address (1 host up) scanned in 2.69 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:41 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 83.206.139.100
+# Nmap done at Tue May  3 09:55:44 2022 -- 1 IP address (0 hosts up) scanned in 3.18 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:44 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 54.36.185.141
+Nmap scan report for ip141.ip-54-36-185.eu (54.36.185.141)
+Host is up (0.21s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:47 2022 -- 1 IP address (1 host up) scanned in 2.47 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:47 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 47.243.181.67
+Nmap scan report for 47.243.181.67
+Host is up (0.20s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:52 2022 -- 1 IP address (1 host up) scanned in 5.03 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:52 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 156.255.43.207
+Nmap scan report for 156.255.43.207
+Host is up (0.22s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:55:54 2022 -- 1 IP address (1 host up) scanned in 2.78 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:54 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 184.85.133.196
+# Nmap done at Tue May  3 09:55:58 2022 -- 1 IP address (0 hosts up) scanned in 3.20 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:55:58 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 43.155.102.198
+Nmap scan report for 43.155.102.198
+Host is up (0.22s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:56:00 2022 -- 1 IP address (1 host up) scanned in 2.66 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:56:00 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 203.190.243.240
+Nmap scan report for 203.190.243.240
+Host is up (0.24s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:56:04 2022 -- 1 IP address (1 host up) scanned in 3.54 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:56:04 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 70.63.12.186
+Nmap scan report for rrcs-70-63-12-186.central.biz.rr.com (70.63.12.186)
+Host is up (0.24s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:56:09 2022 -- 1 IP address (1 host up) scanned in 5.40 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:56:09 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 118.214.42.218
+Nmap scan report for a118-214-42-218.deploy.static.akamaitechnologies.com (118.214.42.218)
+Host is up (0.33s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:56:13 2022 -- 1 IP address (1 host up) scanned in 3.94 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:56:13 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 96.7.190.159
+Nmap scan report for a96-7-190-159.deploy.static.akamaitechnologies.com (96.7.190.159)
+Host is up (0.051s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:56:14 2022 -- 1 IP address (1 host up) scanned in 0.86 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:56:14 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 66.180.56.27
+# Nmap done at Tue May  3 09:56:17 2022 -- 1 IP address (0 hosts up) scanned in 3.20 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:56:18 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 107.172.41.86
+# Nmap done at Tue May  3 09:56:21 2022 -- 1 IP address (0 hosts up) scanned in 3.26 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:56:21 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 122.117.209.175
+Nmap scan report for 122-117-209-175.hinet-ip.hinet.net (122.117.209.175)
+Host is up (0.20s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:56:26 2022 -- 1 IP address (1 host up) scanned in 4.77 seconds
+# Nmap 7.92 scan initiated Tue May  3 09:56:26 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 101.35.170.198
+Nmap scan report for 101.35.170.198
+Host is up (0.21s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 09:56:30 2022 -- 1 IP address (1 host up) scanned in 4.55 seconds

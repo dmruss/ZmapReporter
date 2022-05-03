@@ -5,7 +5,7 @@
 import os
 import subprocess
 import sys
-from src/zscript import runZmap
+from src.zscript import runZmap
 
 
 def runRep():

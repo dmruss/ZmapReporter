@@ -1,11 +1,12 @@
 import unittest
 from src.parser import *
 from src.reporter import *
+from src.nmap_script import *
 import json
 import pandas as pd
 
 
-# class TestParser(unittest.TestCase):
+class TestParser(unittest.TestCase):
 
 #     def test_constructor(self):
 #         parser = Parser('/home/guest/Desktop/zmaptemp/port80grabs/202205011231_p80/')
@@ -27,8 +28,17 @@ import pandas as pd
     #     self.assertEqual(len(parsed_banners['mysql']), 50)
     #     self.assertEqual(len(parsed_banners['geo']), 50)
 
+    def test_nmap_parser(self):
+        parser = Parser('./tests/data')
+        scan_dict = parser.parse_nmap_scans()
+        print(scan_dict['http'].iloc[0])
+        print()
+        print(scan_dict['smtp'].iloc[0])
+        print()
+        print(scan_dict['smb'].iloc[0])
+        self.assertEqual(1,0)
 
-class TestReporter(unittest.TestCase):
+# class TestReporter(unittest.TestCase):
 
     # def test_geo(self):
     #     geo_test_data = pd.read_csv('./tests/data/geotest.csv', index_col='ip_address')
@@ -47,15 +57,28 @@ class TestReporter(unittest.TestCase):
     #     plotter.close_pp()
     #     self.assertEqual(1,0)
 
-    def test_report(self):
-        test_tables = ['ftp', 'http', 'mysql', 'ssh', 'tls', 'geo']
-        banner_dfs = {}
-        for table in test_tables:
-            test_data = pd.read_csv('./tests/data/'+table+'test.csv', index_col='ip_address')
-            banner_dfs[table] = test_data
-        plotter = Plotter('./tests/data/output', 80, 50)
-        plotter.report(banner_dfs)
-        self.assertEqual(1,0)
+    # def test_report(self):
+    #     test_tables = ['ftp', 'http', 'mysql', 'ssh', 'tls', 'geo']
+    #     banner_dfs = {}
+    #     for table in test_tables:
+    #         test_data = pd.read_csv('./tests/data/'+table+'test.csv', index_col='ip_address')
+    #         banner_dfs[table] = test_data
+    #     plotter = Plotter('./tests/data/output', 80, 50)
+    #     plotter.report(banner_dfs)
+    #     self.assertEqual(1,0)
+
+# class TestNmapScanner(unittest.TestCase):
+
+#     def test_http_scan(self):
+#         test_tables = ['ftp', 'http', 'mysql', 'ssh', 'tls', 'geo']
+#         banner_dfs = {}
+#         for table in test_tables:
+#             test_data = pd.read_csv('./tests/data/'+table+'test.csv', index_col='ip_address')
+#             banner_dfs[table] = test_data
+#         nmap = NmapScanner('./tests/data/', banner_dfs, 50, 'small')
+#         nmap.smtp_scan()
+#         nmap.smb_scan()
+        
 
 
 if __name__ == '__main__':

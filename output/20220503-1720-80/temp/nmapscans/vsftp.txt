@@ -1,2 +1,0 @@
-# Nmap 7.92 scan initiated Tue May  3 17:23:03 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1720-80/temp/nmapscans/vsftp.txt --append-output 204.197.249.30
-# Nmap done at Tue May  3 17:23:06 2022 -- 1 IP address (0 hosts up) scanned in 3.16 seconds

@@ -4,7 +4,7 @@
 ###
 import os
 import sys
-from src.zscript import runZmap
+from src.zscript import *
 
 
 def runRep():
@@ -51,9 +51,13 @@ def runRep():
             else:
                 break
 
-    runZmap(p, n, s)
+    zmap_reporter = ZmapReporter(p, n, s)
+    zmap_reporter.zmap()    
+    zmap_reporter.zgrab_scans()
+    banner_dfs = zmap_reporter.parse_banners()
+    zmap_reporter.nmap_scans(banner_dfs)
+    zmap_reporter.nmap_parser()
     
-      
 
 
 def helpMes():

@@ -1,32 +1,32 @@
 ip_address,success,version,cert_issuer,company
-96.7.190.159,True,TLSv1.2,,
-92.118.228.18,True,TLSv1.2,,
-104.65.11.193,True,TLSv1.2,,
-23.192.174.230,True,TLSv1.2,,
-38.63.157.224,True,TLSv1.2,,
+96.7.190.159,True,TLSv1.2,DigiCert SHA2 Secure Server CA,The Estee Lauder Companies Inc
+92.118.228.18,True,TLSv1.2,R3,
+104.65.11.193,True,TLSv1.2,DigiCert TLS RSA SHA256 2020 CA1,"Leaf Group, LTD."
+23.192.174.230,True,TLSv1.2,DigiCert SHA2 Secure Server CA,Oracle Corporation
+38.63.157.224,True,TLSv1.2,R3,
 74.205.13.107,False,,,
-66.180.56.27,True,TLSv1.2,,
-108.138.173.35,True,TLSv1.2,,
-198.1.123.24,True,TLSv1.2,,
-69.73.141.21,True,TLSv1.2,,
-165.206.203.170,True,TLSv1.2,,
-24.28.186.25,True,TLSv1.2,,
+66.180.56.27,True,TLSv1.2,webservices.in2.net,SomeOrganization
+108.138.173.35,True,TLSv1.2,Amazon,
+198.1.123.24,True,TLSv1.2,R3,
+69.73.141.21,True,TLSv1.2,"cPanel, Inc. Certification Authority",
+165.206.203.170,True,TLSv1.2,Go Daddy Secure Certificate Authority - G2,
+24.28.186.25,True,TLSv1.2,R3,
 52.222.168.34,False,,,
-50.211.233.6,True,TLSv1.2,,
+50.211.233.6,True,TLSv1.2,682226e3e847116d94fdff56d5520eb4325931ea8cfd80d0c99badfd,
 67.213.8.184,False,,,
-104.112.20.91,True,TLSv1.2,,
+104.112.20.91,True,TLSv1.2,Microsoft RSA TLS CA 02,Microsoft Corporation
 156.255.43.207,False,,,
-27.120.126.101,True,TLSv1.2,,
+27.120.126.101,True,TLSv1.2,centos-7-x86_64-simple,SomeOrganization
 43.155.102.198,False,,,
 83.9.226.224,False,,,
-160.153.129.187,True,TLSv1.2,,
-180.215.155.157,True,TLSv1.2,,
-172.104.234.131,True,TLSv1.2,,
-52.48.201.80,True,TLSv1.2,,
-91.102.136.236,True,TLSv1.2,,
-8.210.43.20,True,TLSv1.2,,
-184.85.133.196,True,TLSv1.2,,
-118.214.42.218,True,TLSv1.2,,
+160.153.129.187,True,TLSv1.2,Starfield Secure Certificate Authority - G2,
+180.215.155.157,True,TLSv1.2,R3,
+172.104.234.131,True,TLSv1.2,frozenspire.com,SK
+52.48.201.80,True,TLSv1.2,Amazon,
+91.102.136.236,True,TLSv1.2,Sectigo RSA Domain Validation Secure Server CA,
+8.210.43.20,True,TLSv1.2,Encryption Everywhere DV TLS CA - G1,
+184.85.133.196,True,TLSv1.2,DigiCert SHA2 Secure Server CA,Times Internet Limited
+118.214.42.218,True,TLSv1.2,DigiCert SHA2 Secure Server CA,SAP SE
 104.224.236.221,False,,,
 107.172.41.86,False,,,
 47.243.181.67,False,,,

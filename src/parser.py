@@ -79,7 +79,7 @@ class Parser:
                                 found=True
                                 break
                         if not found:
-                            software_names.append('Not Found')
+                            software_names.append(None)
                     except Exception as e:
                         print(e)
                         software_names.append(None)
@@ -196,12 +196,12 @@ class Parser:
                     except:
                         version.append(None)
                     try:
-                        cert_iss = resp['data']['tls']['result']['server_certificates']['certificate']['parsed']['issuer']['common_name'][0]
+                        cert_iss = resp['data']['tls']['result']['handshake_log']['server_certificates']['certificate']['parsed']['issuer']['common_name'][0]
                         cert_issuer.append(cert_iss)
                     except:
                         cert_issuer.append(None)
                     try:
-                        comp = resp['data']['tls']['result']['server_certificates']['certificate']['parsed']['subject']['organization'][0]
+                        comp = resp['data']['tls']['result']['handshake_log']['server_certificates']['certificate']['parsed']['subject']['organization'][0]
                         company.append(comp)
                     except:
                         company.append(None)
@@ -307,7 +307,8 @@ class Parser:
         mysql_df = parse_mysql_banner(bannerdf_dict) 
         geo_df = query_ip_geo(bannerdf_dict)
         geo_df = query_country(geo_df)
-        geo_df.to_csv('./tests/data/geotest.csv')
+        # geo_df.to_csv('./tests/data/geotest.csv')
+        tls_df.to_csv('./tests/data/tlstest.csv')
 
         banner_dfs['ftp'] = ftp_df
         banner_dfs['http'] = http_df

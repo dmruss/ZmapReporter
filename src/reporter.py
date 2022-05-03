@@ -43,7 +43,7 @@ class Plotter:
         ax0.set_axis_off()
         ax0.set_title('Ip Address Geolocation')
 
-        geo_df.plot(ax=ax0, markersize=40)        
+        geo_df.plot(ax=ax0, markersize=200, c='darkorange')        
         # self.pp.savefig(fig)
         # plt.show()
 
@@ -89,17 +89,24 @@ class Plotter:
         ax.set_title('SSH Software Counts')
         # self.pp.savefig()
 
-       
+    def plot_countries(self, banner_dfs):
+        geo_df = banner_dfs['geo']
+        ax = plt.subplot2grid(self.grid_size, (0,3), colspan=2, rowspan=2)
+        ax.bar(geo_df['country'].value_counts().keys(), height=geo_df['country'].value_counts())
+        ax.set_title('Ip by Countries')
+        plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right')
+
 
     def close_pp(self):
         self.fig.tight_layout()
-        self.fig.subplots_adjust(wspace=0, hspace=.4)
+        self.fig.subplots_adjust(wspace=0, hspace=.6)
         self.fig.subplots_adjust(top=.9)
         self.pp.savefig()
         self.pp.close()
 
     def report(self, banner_dfs):
         self.plot_map(banner_dfs)
+        self.plot_countries(banner_dfs)
         self.plot_success(banner_dfs)
         self.plot_http_server(banner_dfs)
         self.plot_ssh_software(banner_dfs)

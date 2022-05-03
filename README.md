@@ -32,6 +32,40 @@ All outputs generated during a scan will be found in the 'output' folder in the 
 
 Within that scan directory, the report will be saved in the 'final_output' directory, the banner datasets will be in the 'banners' directory, and the malware scans will be in the 'nmapscans' directory.
 
+The example below shows the output for a scan of port 80 on May 3, 2022 at 5:20 pm.
+
+        Root
+        ├── docs
+        ├── LICENSE
+        ├── output
+        │   └── 20220503-1720-80
+        │       ├── banners   <-------------banner based datasets
+        │       │   ├── ftp.csv
+        │       │   ├── geo.csv
+        │       │   ├── http.csv
+        │       │   ├── mysql.csv
+        │       │   ├── ssh.csv
+        │       │   └── tls.csv
+        │       ├── final_output <----------contains report pdf output
+        │       ├── nmapscans <-------------malware scan datasets
+        │       └── temp
+        │           ├── banners
+        │           │   ├── ftp.json
+        │           │   ├── http.json
+        │           │   ├── mysql.json
+        │           │   ├── smtp.json
+        │           │   ├── ssh.json
+        │           │   └── tls.json
+        │           ├── ipaddresses.csv <---list of ip addresses discovered 
+        │           └── nmapscans
+        │               └── http.txt
+        ├── README.md
+        ├── requirements.txt
+        ├── setup.sh
+        ├── src
+        ├── tests
+        └── zmapReporter.py
+
 ## Examples
 
 Below is an example of a scan for 5 addresses with port 80 open.  The user selects a 'small' scan meaning that 1 address will be scanned for malware.

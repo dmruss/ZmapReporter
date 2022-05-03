@@ -27,7 +27,9 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 source .bashrc
 
 pf=$(find /usr/share/doc/ -type d -name "zmap")
-cd $pf
+cd $pf || exit
+cd examples || exit
+
 echo "installing zgrab2 *************************************************************"
 sudo go install github.com/zmap/zgrab2@latest
 cd || exit

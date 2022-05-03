@@ -13,6 +13,8 @@ Zmap Reporter is a wrapper for the Zmap Internet Scanner which gives cyber secur
 
 Required: This program currently only runs on Unix based operating systems and was designed specifically for use with Kali Linux.
 
+![Scan Report](./tests/data/output/out.pdf)
+
 ## Setup
 
 To setup Zmap Reporter, download and unzip this repository to a location where you have read/write priviledges.  From the root directory of the local repository run the setup.sh script.  This will guide your system through setting up dependecies for the program including: Zmap, Zgrab2, Nmap, Python, and several Python dependecies.

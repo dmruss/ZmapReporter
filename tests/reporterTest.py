@@ -65,6 +65,8 @@ class TestReporter(unittest.TestCase):
         parser = Parser('./tests/data')
         nmap_dict = parser.parse_nmap_scans()
         plotter = Plotter('./tests/data/output', 80, 50)
+        print(banner_dfs['http'].head())
+        print(nmap_dict['http'].head())
         plotter.report(banner_dfs, nmap_dict)
         self.assertEqual(1,0)
 

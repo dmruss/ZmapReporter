@@ -1,0 +1,8 @@
+# Nmap 7.92 scan initiated Tue May  3 13:48:18 2022 as: nmap -p 445 --host-timeout 2m -script=smb-double-pulsar-backdoor -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1344-80/temp/nmapscans/smb.txt --append-output 44.194.246.95
+Nmap scan report for ec2-44-194-246-95.compute-1.amazonaws.com (44.194.246.95)
+Host is up (0.11s latency).
+
+PORT    STATE    SERVICE
+445/tcp filtered microsoft-ds
+
+# Nmap done at Tue May  3 13:48:19 2022 -- 1 IP address (1 host up) scanned in 1.49 seconds

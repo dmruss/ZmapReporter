@@ -1,0 +1,6 @@
+# Nmap 7.92 scan initiated Tue May  3 13:39:01 2022 as: nmap --host-timeout 2m -sV --script=http-malware-host -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1338-80/temp/nmapscans/http.txt --append-output 52.9.6.149
+Nmap scan report for ec2-52-9-6-149.us-west-1.compute.amazonaws.com (52.9.6.149)
+Host is up (2.0s latency).
+Skipping host ec2-52-9-6-149.us-west-1.compute.amazonaws.com (52.9.6.149) due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 13:41:08 2022 -- 1 IP address (1 host up) scanned in 126.82 seconds

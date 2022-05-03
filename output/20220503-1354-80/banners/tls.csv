@@ -1,0 +1,3 @@
+ip_address,success,version,cert_issuer,company
+44.225.171.129,True,TLSv1.2,Sectigo RSA Domain Validation Secure Server CA,
+207.246.53.66,False,,,

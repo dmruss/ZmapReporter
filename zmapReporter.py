@@ -56,7 +56,8 @@ def runRep():
     zmap_reporter.zgrab_scans()
     banner_dfs = zmap_reporter.parse_banners()
     zmap_reporter.nmap_scans(banner_dfs)
-    zmap_reporter.nmap_parser()
+    nmap_dict = zmap_reporter.nmap_parser()
+    zmap_reporter.plot_outputs(banner_dfs, nmap_dict)
     
 
 
@@ -69,7 +70,8 @@ def helpMes():
 def main():
     ex = 0
     os.system('mkdir output')
-    print("Welcome to ZmapReporter, please make a selection from the available options in the main menu and press enter.\n")
+    print('\n###############################################')
+    print("Welcome to ZmapReporter, please make a selection \nfrom the available options in the main menu and press enter.\n")
     while ex == 0:
         print("Main Menu")
         print("Run Reporter (r)")

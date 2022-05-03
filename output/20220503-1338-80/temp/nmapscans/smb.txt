@@ -1,0 +1,2 @@
+# Nmap 7.92 scan initiated Tue May  3 13:42:22 2022 as: nmap -p 445 --host-timeout 2m -script=smb-double-pulsar-backdoor -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1338-80/temp/nmapscans/smb.txt --append-output 52.9.6.149
+# Nmap done at Tue May  3 13:42:23 2022 -- 1 IP address (0 hosts up) scanned in 1.19 seconds

@@ -1,14 +1,11 @@
 #import to zmapReporter
 #create viz from dataframes
 
-import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import geopandas as gpd
 import seaborn as sns
 from shapely.geometry import Point
 from matplotlib.backends.backend_pdf import PdfPages
-from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 class Plotter:

@@ -2,7 +2,6 @@ import unittest
 from src.parser import *
 from src.reporter import *
 from src.nmap_script import *
-import json
 import pandas as pd
 
 

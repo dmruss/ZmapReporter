@@ -7,6 +7,8 @@ import os
 import json
 from ip2geotools.databases.noncommercial import DbIpCity
 import time
+from geopy.geocoders import Nominatim
+
 
 class Parser:
 
@@ -280,6 +282,21 @@ class Parser:
             print(geo_df.iloc[0])
             return geo_df
 
+        def query_country(geo_df):
+            geolocator = Nominatim(user_agent="ZmapReporter")
+            countries = []
+            for index in range(len(geo_df)):
+                latlong=(str(geo_df.iloc[index]['latitude'])+','+str(geo_df.iloc[index]['longitude']))
+                try:
+                    location = geolocator.reverse(latlong, language='en')
+                    time.sleep(5)
+                    location_dict = location.raw['address']
+                    country = location_dict.get('country')
+                    countries.append(country)
+                except:
+                    countries.append(None)
+            geo_df['country'] = countries
+            return geo_df
 
 
         #run parsers and add to dictionary
@@ -289,6 +306,8 @@ class Parser:
         tls_df = parse_tls_banner(bannerdf_dict)    
         mysql_df = parse_mysql_banner(bannerdf_dict) 
         geo_df = query_ip_geo(bannerdf_dict)
+        geo_df = query_country(geo_df)
+        geo_df.to_csv('./tests/data/geotest.csv')
 
         banner_dfs['ftp'] = ftp_df
         banner_dfs['http'] = http_df

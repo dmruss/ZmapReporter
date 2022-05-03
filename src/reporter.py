@@ -55,7 +55,7 @@ class Plotter:
         # fig, ax = plt.subplots(1, 5)
         # fig.set_size_inches(15, 5)
         # fig.tight_layout()
-        col = 0
+        col = 1
         for grab_type in banner_dfs.keys():
             if grab_type == 'geo': continue
             ax = plt.subplot2grid(self.grid_size, (2,col))
@@ -126,6 +126,7 @@ class Plotter:
             else:
                 vals.append(0)
         ax.bar(nmap_dict.keys(), height = vals)
+        ax.set_title('Malware Scan Detection')
 
 
     def close_pp(self):

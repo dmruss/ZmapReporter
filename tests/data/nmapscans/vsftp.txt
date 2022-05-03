@@ -1,0 +1,70 @@
+# Nmap 7.92 scan initiated Tue May  3 10:25:15 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 92.118.228.18
+Nmap scan report for 92.118.228.18
+Host is up (0.053s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:25:43 2022 -- 1 IP address (1 host up) scanned in 27.43 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:43 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 198.1.123.24
+Nmap scan report for server.xcommunication.co.uk (198.1.123.24)
+Host is up (0.065s latency).
+
+PORT   STATE    SERVICE
+21/tcp filtered ftp
+
+# Nmap done at Tue May  3 10:25:47 2022 -- 1 IP address (1 host up) scanned in 4.93 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:48 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 66.180.56.27
+# Nmap done at Tue May  3 10:25:51 2022 -- 1 IP address (0 hosts up) scanned in 3.16 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:51 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 69.73.141.21
+# Nmap done at Tue May  3 10:25:54 2022 -- 1 IP address (0 hosts up) scanned in 3.16 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:54 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 160.153.129.187
+# Nmap done at Tue May  3 10:25:57 2022 -- 1 IP address (0 hosts up) scanned in 3.19 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:57 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 8.210.43.20
+Nmap scan report for 8.210.43.20
+Host is up (0.21s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:26:25 2022 -- 1 IP address (1 host up) scanned in 28.34 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:26:25 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 206.233.176.75
+Nmap scan report for host75.dichroma.com (206.233.176.75)
+Host is up (0.20s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:26:47 2022 -- 1 IP address (1 host up) scanned in 22.02 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:26:47 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 168.206.199.246
+Nmap scan report for 168.206.199.246
+Host is up (0.24s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:27:18 2022 -- 1 IP address (1 host up) scanned in 30.15 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:27:18 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 54.36.185.141
+Nmap scan report for ip141.ip-54-36-185.eu (54.36.185.141)
+Host is up (0.21s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:27:29 2022 -- 1 IP address (1 host up) scanned in 11.35 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:27:29 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 121.197.127.169
+Nmap scan report for 121.197.127.169
+Host is up (0.27s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:27:51 2022 -- 1 IP address (1 host up) scanned in 22.26 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:27:51 2022 as: nmap --host-timeout 2m --script ftp-vsftpd-backdoor -p 21 -oN ./tests/data/nmapscans/vsftp.txt --append-output 101.35.170.198
+Nmap scan report for 101.35.170.198
+Host is up (0.26s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:28:16 2022 -- 1 IP address (1 host up) scanned in 24.49 seconds

@@ -1,0 +1,70 @@
+# Nmap 7.92 scan initiated Tue May  3 10:24:44 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 92.118.228.18
+Nmap scan report for 92.118.228.18
+Host is up (0.048s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:24:52 2022 -- 1 IP address (1 host up) scanned in 8.43 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:24:52 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 198.1.123.24
+Nmap scan report for server.xcommunication.co.uk (198.1.123.24)
+Host is up (0.085s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:24:57 2022 -- 1 IP address (1 host up) scanned in 4.52 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:24:57 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 66.180.56.27
+# Nmap done at Tue May  3 10:25:00 2022 -- 1 IP address (0 hosts up) scanned in 3.17 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:00 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 69.73.141.21
+# Nmap done at Tue May  3 10:25:03 2022 -- 1 IP address (0 hosts up) scanned in 3.17 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:03 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 160.153.129.187
+Nmap scan report for ip-160-153-129-187.ip.secureserver.net (160.153.129.187)
+Host is up (0.20s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:25:06 2022 -- 1 IP address (1 host up) scanned in 3.05 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:06 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 8.210.43.20
+Nmap scan report for 8.210.43.20
+Host is up (0.20s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:25:07 2022 -- 1 IP address (1 host up) scanned in 1.05 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:07 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 206.233.176.75
+Nmap scan report for host75.dichroma.com (206.233.176.75)
+Host is up (0.21s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:25:08 2022 -- 1 IP address (1 host up) scanned in 1.06 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:09 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 168.206.199.246
+Nmap scan report for 168.206.199.246
+Host is up (0.22s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:25:10 2022 -- 1 IP address (1 host up) scanned in 1.11 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:10 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 54.36.185.141
+Nmap scan report for ip141.ip-54-36-185.eu (54.36.185.141)
+Host is up (0.21s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:25:11 2022 -- 1 IP address (1 host up) scanned in 1.09 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:11 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 121.197.127.169
+# Nmap done at Tue May  3 10:25:14 2022 -- 1 IP address (0 hosts up) scanned in 3.16 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:25:14 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN ./tests/data/nmapscans/proftp.txt --append-output 101.35.170.198
+Nmap scan report for 101.35.170.198
+Host is up (0.20s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 10:25:15 2022 -- 1 IP address (1 host up) scanned in 1.15 seconds

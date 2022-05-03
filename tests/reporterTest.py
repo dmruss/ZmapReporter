@@ -73,15 +73,18 @@ class TestReporter(unittest.TestCase):
 
 # class TestNmapScanner(unittest.TestCase):
 
-#     def test_http_scan(self):
+#     def test_scan(self):
 #         test_tables = ['ftp', 'http', 'mysql', 'ssh', 'tls', 'geo']
 #         banner_dfs = {}
 #         for table in test_tables:
 #             test_data = pd.read_csv('./tests/data/'+table+'test.csv', index_col='ip_address')
 #             banner_dfs[table] = test_data
 #         nmap = NmapScanner('./tests/data/', banner_dfs, 50, 'small')
-#         nmap.smtp_scan()
-#         nmap.smb_scan()
+#         # nmap.smtp_scan()
+#         # nmap.smb_scan()
+#         nmap.proftp_scan()
+#         nmap.vsftpd_scan()
+#         nmap.authspoof_scan()
         
 
 

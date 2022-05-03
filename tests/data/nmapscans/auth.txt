@@ -3,7 +3,7 @@ Nmap scan report for a96-7-190-159.deploy.static.akamaitechnologies.com (96.7.19
 Host is up (0.058s latency).
 Not shown: 999 filtered tcp ports (no-response)
 PORT    STATE SERVICE    VERSION
-443/tcp open  tcpwrapped
+443/tcp open  tcpwrapped Spoofed
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Tue May  3 10:29:46 2022 -- 1 IP address (1 host up) scanned in 90.75 seconds

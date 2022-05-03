@@ -10,16 +10,16 @@ from src.zscript import *
 def runRep():
     while True:
         try:
-            p = int(input("\nInput Port Number between 0 and 65535 \nor (-1) to return to main menu: "))
+            p = int(input("\nInput Port Number between 1 and 65535 \nor (-1) to return to main menu: "))
         except ValueError:
             print("Error: Invalid input")
             print("Enter a port between 0 and 65535")
             continue
         else:
             if p == -1: return
-            elif p < 0 and p > 65535:
+            elif p < 1 and p > 65535:
                 print("Error: Invalid input")
-                print("Enter a port between 0 and 65535")
+                print("Enter a port between 1 and 65535")
             else:
                 break
     while True:

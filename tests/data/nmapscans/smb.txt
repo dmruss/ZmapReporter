@@ -3,7 +3,7 @@ Nmap scan report for a104-65-11-193.deploy.static.akamaitechnologies.com (104.65
 Host is up (0.053s latency).
 
 PORT    STATE    SERVICE
-445/tcp filtered microsoft-ds
+445/tcp filtered microsoft-ds VULNERABLE
 
 # Nmap done at Tue May  3 09:54:50 2022 -- 1 IP address (1 host up) scanned in 6.87 seconds
 # Nmap 7.92 scan initiated Tue May  3 09:54:50 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 38.63.157.224
@@ -27,7 +27,7 @@ Nmap scan report for static-21-141-73-69.nocdirect.com (69.73.141.21)
 Host is up (0.10s latency).
 
 PORT    STATE    SERVICE
-445/tcp filtered microsoft-ds
+445/tcp filtered microsoft-ds VULNERABLE
 
 # Nmap done at Tue May  3 09:54:59 2022 -- 1 IP address (1 host up) scanned in 1.93 seconds
 # Nmap 7.92 scan initiated Tue May  3 09:54:59 2022 as: nmap -p 445 --host-timeout 60s -script=smb-double-pulsar-backdoor -oN ./tests/data/nmapscans/smb.txt --append-output 8.210.43.20

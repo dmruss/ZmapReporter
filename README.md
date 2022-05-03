@@ -11,7 +11,9 @@ Zmap Reporter is a wrapper for the Zmap Internet Scanner which gives cyber secur
  - Integration with Nmap for malware detection scanning
  - Plotting and report generation
 
-This program currently only runs on Unix based operating systems and was designed specifically for use with Kali Linux.
+Required: This program currently only runs on Unix based operating systems and was designed specifically for use with Kali Linux.
+
+![Scan Report](./docs/exampleReport.png)
 
 ## Setup
 
@@ -19,17 +21,20 @@ To setup Zmap Reporter, download and unzip this repository to a location where y
 
 ## Usage
 
-To use the program, from the root directory of the project run 'python3 zmapReporter.py' command.  This will open a menu in the terminal window which will guide you through selecting parameters for scanning.
+To use the program, from the root directory of the project run 
+```python3 zmapReporter.py``` command.  This will open a menu in the terminal window which will guide you through selecting parameters for scanning.
 
 The tool will output to the command line as the program is run.  It will return to the main menu upon completion.  
 
 ### Outputs
 
-All outputs generated during a scan will be found in the 'output' folder in the root directory.  Each scan will be contained in a separte directory titled by <year><month><day>-<time>-<port>
+All outputs generated during a scan will be found in the 'output' folder in the root directory.  Each scan will be contained in a separte directory titled by [year][month][day]-[time][port]
 
 Within that scan directory, the report will be saved in the 'final_output' directory, the banner datasets will be in the 'banners' directory, and the malware scans will be in the 'nmapscans' directory.
 
 ## Examples
+
+Below is an example of a scan for 5 addresses with port 80 open.  The user selects a 'small' scan meaning that 1 address will be scanned for malware.
 ```
 >python3 zmapReporter.py
 
@@ -42,21 +47,16 @@ Run Reporter (r)
 Help (h)
 Exit (e)
 Selection: >r
-```
 
-```
 Input Port Number between 0 and 65535 
 or (-1) to return to main menu: >80
-```
-```
+
 Input Sample Size less than 500 
 or (-1) to return to main menu: >5
-```
-```
+
 Input Scan Size Small (1), Medium (2), or Large (3) 
 or (-1) to return to main menu: >1
-```
-```
+
 May 03 15:45:16.849 [INFO] zmap: output module: csv
  0:00 0%; send: 0 0 p/s (0 p/s avg); recv: 0 0 p/s (0 p/s avg); drops: 0 p/s (0 p/s avg); hitrate: 0.00%
  0:01 0%; send: 80263 80.1 Kp/s (77.5 Kp/s avg); recv: 0 0 p/s (0 p/s avg); drops: 0 p/s (0 p/s avg); hitrate: 0.00%

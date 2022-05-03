@@ -330,23 +330,26 @@ class Parser:
             
             file_path = input_dir + '/http.txt'
             with open(file_path, 'r') as f:
-                new_scan = True
-                appended = False  
+                ip_appended = False  
+                scan_appended = False
                 for line in f:
                     if line[0] == '#':
-                        if new_scan:
+                        if 'initiated' in line and not ip_appended:
                             ip_addresses.append(line.split(' ')[-1])
-                            new_scan = False
-                        elif not new_scan and appended == False:
+                            ip_appended = True
+               
+                        elif 'done' in line and not scan_appended:
                             zombies.append(False)
-                            new_scan = True
+                            ip_appended = False
+                            scan_appended = False
+                        elif 'done' in line:
+                            ip_appended = False
+                            scan_appended = False                            
                     else:
-                        new_scan = False
-                    if not new_scan and not appended:
-                        #look for infected
                         if 'infected' in line:
                             zombies.append(True)
-                            appended = True
+                            scan_appended  = True                            
+                       
             df = pd.DataFrame()
             df['ip_address'] = ip_addresses
             df['zombie'] = zombies
@@ -359,23 +362,25 @@ class Parser:
             
             file_path = input_dir + '/smtp.txt'
             with open(file_path, 'r') as f:
-                new_scan = True
-                appended = False  
+                ip_appended = False  
+                scan_appended = False
                 for line in f:
                     if line[0] == '#':
-                        if new_scan:
+                        if 'initiated' in line and not ip_appended:
                             ip_addresses.append(line.split(' ')[-1])
-                            new_scan = False
-                        elif not new_scan and appended == False:
+                            ip_appended = True
+               
+                        elif 'done' in line and not scan_appended:
                             possible_backdoor.append(False)
-                            new_scan = True
+                            ip_appended = False
+                            scan_appended = False
+                        elif 'done' in line:
+                            ip_appended = False
+                            scan_appended = False                            
                     else:
-                        new_scan = False
-                    if not new_scan and not appended:
-                        #look for infected
                         if 'malware' in line:
                             possible_backdoor.append(True)
-                            appended = True
+                            scan_appended  = True    
             df = pd.DataFrame()
             df['ip_address'] = ip_addresses
             df['possible_backdoor'] = possible_backdoor
@@ -388,23 +393,25 @@ class Parser:
             
             file_path = input_dir + '/smb.txt'
             with open(file_path, 'r') as f:
-                new_scan = True
-                appended = False  
+                ip_appended = False  
+                scan_appended = False
                 for line in f:
                     if line[0] == '#':
-                        if new_scan:
+                        if 'initiated' in line and not ip_appended:
                             ip_addresses.append(line.split(' ')[-1])
-                            new_scan = False
-                        elif not new_scan and appended == False:
+                            ip_appended = True
+               
+                        elif 'done' in line and not scan_appended:
                             possible_backdoor.append(False)
-                            new_scan = True
+                            ip_appended = False
+                            scan_appended = False
+                        elif 'done' in line:
+                            ip_appended = False
+                            scan_appended = False                            
                     else:
-                        new_scan = False
-                    if not new_scan and not appended:
-                        #look for infected
                         if 'VULNERABLE' in line:
                             possible_backdoor.append(True)
-                            appended = True
+                            scan_appended  = True 
             df = pd.DataFrame()
             df['ip_address'] = ip_addresses
             df['backdoor'] = possible_backdoor
@@ -417,23 +424,25 @@ class Parser:
             
             file_path = input_dir + '/proftp.txt'
             with open(file_path, 'r') as f:
-                new_scan = True
-                appended = False  
+                ip_appended = False  
+                scan_appended = False
                 for line in f:
                     if line[0] == '#':
-                        if new_scan:
+                        if 'initiated' in line and not ip_appended:
                             ip_addresses.append(line.split(' ')[-1])
-                            new_scan = False
-                        elif not new_scan and appended == False:
+                            ip_appended = True
+               
+                        elif 'done' in line and not scan_appended:
                             backdoor.append(False)
-                            new_scan = True
+                            ip_appended = False
+                            scan_appended = False
+                        elif 'done' in line:
+                            ip_appended = False
+                            scan_appended = False                            
                     else:
-                        new_scan = False
-                    if not new_scan and not appended:
-                        #look for infected
                         if 'backdoored' in line:
                             backdoor.append(True)
-                            appended = True
+                            scan_appended  = True 
             df = pd.DataFrame()
             df['ip_address'] = ip_addresses
             df['backdoor'] = backdoor
@@ -446,23 +455,25 @@ class Parser:
             
             file_path = input_dir + '/vsftp.txt'
             with open(file_path, 'r') as f:
-                new_scan = True
-                appended = False  
+                ip_appended = False  
+                scan_appended = False
                 for line in f:
                     if line[0] == '#':
-                        if new_scan:
+                        if 'initiated' in line and not ip_appended:
                             ip_addresses.append(line.split(' ')[-1])
-                            new_scan = False
-                        elif not new_scan and appended == False:
+                            ip_appended = True
+               
+                        elif 'done' in line and not scan_appended:
                             backdoor.append(False)
-                            new_scan = True
+                            ip_appended = False
+                            scan_appended = False
+                        elif 'done' in line:
+                            ip_appended = False
+                            scan_appended = False                            
                     else:
-                        new_scan = False
-                    if not new_scan and not appended:
-                        #look for infected
                         if 'VULNERABLE' in line:
                             backdoor.append(True)
-                            appended = True
+                            scan_appended  = True 
             df = pd.DataFrame()
             df['ip_address'] = ip_addresses
             df['backdoor'] = backdoor
@@ -475,23 +486,25 @@ class Parser:
             
             file_path = input_dir + '/auth.txt'
             with open(file_path, 'r') as f:
-                new_scan = True
-                appended = False  
+                ip_appended = False  
+                scan_appended = False
                 for line in f:
                     if line[0] == '#':
-                        if new_scan:
+                        if 'initiated' in line and not ip_appended:
                             ip_addresses.append(line.split(' ')[-1])
-                            new_scan = False
-                        elif not new_scan and appended == False:
+                            ip_appended = True
+               
+                        elif 'done' in line and not scan_appended:
                             spoofed.append(False)
-                            new_scan = True
+                            ip_appended = False
+                            scan_appended = False
+                        elif 'done' in line:
+                            ip_appended = False
+                            scan_appended = False                            
                     else:
-                        new_scan = False
-                    if not new_scan and not appended:
-                        #look for infected
                         if 'Spoofed' in line:
                             spoofed.append(True)
-                            appended = True
+                            scan_appended  = True 
             df = pd.DataFrame()
             df['ip_address'] = ip_addresses
             df['backdoor'] = spoofed
@@ -501,6 +514,7 @@ class Parser:
         for file in file_list:
             if file == 'http.txt':
                 http_df = parse_http()
+                print(http_df.head())
                 scan_dict['http'] = http_df
             elif file == 'smtp.txt':
                 smtp_df = parse_smtp()

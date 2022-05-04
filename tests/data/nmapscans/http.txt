@@ -13,7 +13,7 @@ PORT     STATE  SERVICE    VERSION
 5001/tcp open   tcpwrapped
 5003/tcp open   tcpwrapped
 8080/tcp open   tcpwrapped
-|_http-malware-host: Host appears to be clean
+|_http-malware-host: Host appears to be infected
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Mon May  2 23:34:00 2022 -- 1 IP address (1 host up) scanned in 22.82 seconds
@@ -93,7 +93,7 @@ PORT     STATE  SERVICE    VERSION
 22/tcp   open   tcpwrapped
 53/tcp   closed domain
 80/tcp   open   http       nginx
-|_http-malware-host: Host appears to be clean
+|_http-malware-host: Host appears to be infected
 443/tcp  open   ssl/http   nginx
 |_http-malware-host: Host appears to be clean
 3306/tcp open   mysql      MySQL (unauthorized)
@@ -166,7 +166,7 @@ Not shown: 997 filtered tcp ports (no-response)
 PORT    STATE  SERVICE    VERSION
 53/tcp  closed domain
 80/tcp  open   tcpwrapped
-|_http-malware-host: Host appears to be clean
+|_http-malware-host: Host appears to be infected
 443/tcp open   tcpwrapped
 |_http-malware-host: Host appears to be clean
 

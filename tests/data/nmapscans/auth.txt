@@ -1,0 +1,106 @@
+# Nmap 7.92 scan initiated Tue May  3 10:28:16 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 96.7.190.159
+Nmap scan report for a96-7-190-159.deploy.static.akamaitechnologies.com (96.7.190.159)
+Host is up (0.058s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT    STATE SERVICE    VERSION
+443/tcp open  tcpwrapped Spoofed
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:29:46 2022 -- 1 IP address (1 host up) scanned in 90.75 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:29:47 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 92.118.228.18
+# Nmap done at Tue May  3 10:29:50 2022 -- 1 IP address (0 hosts up) scanned in 3.22 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:29:50 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 104.65.11.193
+Nmap scan report for a104-65-11-193.deploy.static.akamaitechnologies.com (104.65.11.193)
+Host is up (0.054s latency).
+Skipping host a104-65-11-193.deploy.static.akamaitechnologies.com (104.65.11.193) due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:31:52 2022 -- 1 IP address (1 host up) scanned in 122.41 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:31:52 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 23.192.174.230
+Nmap scan report for a23-192-174-230.deploy.static.akamaitechnologies.com (23.192.174.230)
+Host is up (0.072s latency).
+Skipping host a23-192-174-230.deploy.static.akamaitechnologies.com (23.192.174.230) due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:33:55 2022 -- 1 IP address (1 host up) scanned in 122.50 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:33:55 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 38.63.157.224
+# Nmap done at Tue May  3 10:33:58 2022 -- 1 IP address (0 hosts up) scanned in 3.22 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:33:58 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 66.180.56.27
+# Nmap done at Tue May  3 10:34:01 2022 -- 1 IP address (0 hosts up) scanned in 3.24 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:34:01 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 108.138.173.35
+Nmap scan report for server-108-138-173-35.dfw56.r.cloudfront.net (108.138.173.35)
+Host is up (0.46s latency).
+Skipping host server-108-138-173-35.dfw56.r.cloudfront.net (108.138.173.35) due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:36:06 2022 -- 1 IP address (1 host up) scanned in 124.81 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:36:06 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 198.1.123.24
+Nmap scan report for server.xcommunication.co.uk (198.1.123.24)
+Host is up (0.066s latency).
+Not shown: 993 filtered tcp ports (no-response)
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 5.3 (protocol 2.0)
+80/tcp  open  http     Apache httpd
+|_http-server-header: Apache
+110/tcp open  pop3     Dovecot pop3d
+443/tcp open  ssl/http Apache httpd
+|_http-server-header: Apache
+465/tcp open  ssl/smtp Exim smtpd 4.94.2
+587/tcp open  smtp     Exim smtpd 4.94.2
+995/tcp open  ssl/pop3 Dovecot pop3d
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:36:40 2022 -- 1 IP address (1 host up) scanned in 34.06 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:36:40 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 69.73.141.21
+Nmap scan report for static-21-141-73-69.nocdirect.com (69.73.141.21)
+Host is up (0.10s latency).
+Skipping host static-21-141-73-69.nocdirect.com (69.73.141.21) due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:38:41 2022 -- 1 IP address (1 host up) scanned in 120.52 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:38:41 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 165.206.203.170
+# Nmap done at Tue May  3 10:38:44 2022 -- 1 IP address (0 hosts up) scanned in 3.22 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:38:44 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 24.28.186.25
+# Nmap done at Tue May  3 10:38:47 2022 -- 1 IP address (0 hosts up) scanned in 3.23 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:38:47 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 50.211.233.6
+Nmap scan report for 50.211.233.6
+Host is up (0.096s latency).
+Skipping host 50.211.233.6 due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:40:48 2022 -- 1 IP address (1 host up) scanned in 120.49 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:40:48 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 104.112.20.91
+Nmap scan report for a104-112-20-91.deploy.static.akamaitechnologies.com (104.112.20.91)
+Host is up (0.11s latency).
+Skipping host a104-112-20-91.deploy.static.akamaitechnologies.com (104.112.20.91) due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:42:52 2022 -- 1 IP address (1 host up) scanned in 124.47 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:42:52 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 27.120.126.101
+# Nmap done at Tue May  3 10:42:55 2022 -- 1 IP address (0 hosts up) scanned in 2.91 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:42:55 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 160.153.129.187
+# Nmap done at Tue May  3 10:42:58 2022 -- 1 IP address (0 hosts up) scanned in 3.05 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:42:58 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 180.215.155.157
+# Nmap done at Tue May  3 10:43:01 2022 -- 1 IP address (0 hosts up) scanned in 3.03 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:43:01 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 172.104.234.131
+# Nmap done at Tue May  3 10:43:04 2022 -- 1 IP address (0 hosts up) scanned in 3.04 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:43:04 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 52.48.201.80
+Nmap scan report for ec2-52-48-201-80.eu-west-1.compute.amazonaws.com (52.48.201.80)
+Host is up (0.19s latency).
+Skipping host ec2-52-48-201-80.eu-west-1.compute.amazonaws.com (52.48.201.80) due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:45:07 2022 -- 1 IP address (1 host up) scanned in 122.77 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:45:07 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 91.102.136.236
+Nmap scan report for 91.102.136.236
+Host is up (0.47s latency).
+Skipping host 91.102.136.236 due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:47:11 2022 -- 1 IP address (1 host up) scanned in 124.26 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:47:11 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 8.210.43.20
+Nmap scan report for 8.210.43.20
+Host is up (0.20s latency).
+Skipping host 8.210.43.20 due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:49:12 2022 -- 1 IP address (1 host up) scanned in 120.89 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:49:12 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 184.85.133.196
+Nmap scan report for a184-85-133-196.deploy.static.akamaitechnologies.com (184.85.133.196)
+Host is up (0.22s latency).
+Skipping host a184-85-133-196.deploy.static.akamaitechnologies.com (184.85.133.196) due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 10:51:15 2022 -- 1 IP address (1 host up) scanned in 123.12 seconds
+# Nmap 7.92 scan initiated Tue May  3 10:51:15 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN ./tests/data/nmapscans/auth.txt --append-output 118.214.42.218
+# Nmap done at Tue May  3 10:51:19 2022 -- 1 IP address (0 hosts up) scanned in 3.26 seconds

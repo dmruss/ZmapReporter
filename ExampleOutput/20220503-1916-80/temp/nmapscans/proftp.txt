@@ -1,0 +1,24 @@
+# Nmap 7.92 scan initiated Tue May  3 19:28:16 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/proftp.txt --append-output 77.68.82.252
+Nmap scan report for 77.68.82.252
+Host is up (0.19s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 19:28:17 2022 -- 1 IP address (1 host up) scanned in 1.49 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:28:17 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/proftp.txt --append-output 77.68.82.252
+Nmap scan report for 77.68.82.252
+Host is up (0.18s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 19:28:18 2022 -- 1 IP address (1 host up) scanned in 1.01 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:28:18 2022 as: nmap --host-timeout 2m --script ftp-proftpd-backdoor -p 21 -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/proftp.txt --append-output 77.68.82.252
+Nmap scan report for 77.68.82.252
+Host is up (0.19s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+
+# Nmap done at Tue May  3 19:28:19 2022 -- 1 IP address (1 host up) scanned in 1.01 seconds

@@ -63,7 +63,7 @@ To use the program, from the root directory of the project run
 
     Parameter range:
         ports - Integer 1 - 65535.
-        samples - Integer 2 - 500.
+        samples - Integer 5 - 500.
         scan size - Integer 1 - 3 
 
 (h) - The help menu.

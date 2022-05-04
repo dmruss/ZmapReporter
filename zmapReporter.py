@@ -24,16 +24,16 @@ def runRep():
                 break
     while True:
         try:
-            n = int(input("\nInput Sample Size less than 500 \nor (-1) to return to main menu: "))
+            n = int(input("\nInput Sample Size between 5 and 500 \nor (-1) to return to main menu: "))
         except ValueError:
             print("Error: Invalid input")
-            print("Enter a sample size between 1 and 500")
+            print("Enter a sample size between 5 and 500")
             continue
         else:
             if n == -1: return
-            elif n < 1 and n > 500:
+            elif n < 5 and n > 500:
                 print("Error: Invalid input")
-                print("Enter a sample size between 1 and 500")
+                print("Enter a sample size between 5 and 500")
             else:
                 break
     while True:

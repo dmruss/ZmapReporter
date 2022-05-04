@@ -50,7 +50,23 @@ To setup Zmap Reporter, download and unzip this repository to a location where y
 ## Usage
 
 To use the program, from the root directory of the project run 
-```python3 zmapReporter.py``` command.  This will open a menu in the terminal window which will guide you through selecting parameters for scanning.
+```python3 zmapReporter.py``` command.  This will open a menu in the terminal window which will guide you through selecting parameters for scanning.  The menu options are:
+
+(r) - This will request parameters to begin a scan.  Required parameters are 
+      the port number, the sample size of IP addresses to locate, and the scan 
+      size.  The scan size is the number of IP addresses to perform malware 
+      script  scanning on.  This number is limited due to the high network cost 
+      of perfroming malware scans.  Small scans are 1/5 the sample size, medium 
+      scans are 1/3 the sample size, and large scans are 1/2 the sample size.
+
+    Parameter range:
+        ports - Integer 1 - 65535.
+        samples - Integer 2 - 500.
+        scan size - Integer 1 - 3 
+
+(h) - The help menu.
+
+(e) - Exit the program.
 
 The tool will output to the command line as the program is run.  It will return to the main menu upon completion.  
 

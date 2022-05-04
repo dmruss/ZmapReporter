@@ -3,6 +3,7 @@
 #setup file
 echo "Beginning Installation"
 sudo apt-get update
+sudo apt install python3-pip
 
 #install python
 echo "installing python3*****************"

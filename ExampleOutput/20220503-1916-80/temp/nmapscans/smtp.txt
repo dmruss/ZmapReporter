@@ -1,0 +1,28 @@
+# Nmap 7.92 scan initiated Tue May  3 19:24:34 2022 as: nmap -sV --host-timeout 2m -script=smtp-strangeport -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/smtp.txt --append-output 38.54.228.25
+Nmap scan report for 38.54.228.25
+Host is up (0.055s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE  SERVICE    VERSION
+53/tcp closed domain
+80/tcp open   tcpwrapped
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:25:47 2022 -- 1 IP address (1 host up) scanned in 73.02 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:25:47 2022 as: nmap -sV --host-timeout 2m -script=smtp-strangeport -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/smtp.txt --append-output 154.12.194.175
+Nmap scan report for 154.12.194.175
+Host is up (0.11s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE  SERVICE    VERSION
+53/tcp   closed domain
+80/tcp   open   tcpwrapped
+|_http-server-header: squid/3.5.20
+3128/tcp open   tcpwrapped
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:26:06 2022 -- 1 IP address (1 host up) scanned in 19.87 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:26:06 2022 as: nmap -sV --host-timeout 2m -script=smtp-strangeport -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/smtp.txt --append-output 45.60.114.180
+Nmap scan report for 45.60.114.180
+Host is up (0.18s latency).
+Skipping host 45.60.114.180 due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:28:07 2022 -- 1 IP address (1 host up) scanned in 120.58 seconds

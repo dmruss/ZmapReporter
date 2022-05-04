@@ -1,39 +1,26 @@
-#!/bin/sh
+#!/bin/bash
 
 #setup file
 echo "Beginning Installation"
-#sudo apt-get update
+sudo apt-get update
 
 #install python
-echo "installing python3 *************************************************************"
+echo "installing python3*****************"
 sudo apt-get install python3
 
 #install python dependencies
 pip install -r requirements.txt
 
-##also install zmap and zgrab
-echo "installing nmap ****************************************************************"
+#also install zmap and zgrab
+echo "installing nmap*********************"
 sudo apt-get install nmap
 
-echo "installing zmap ****************************************************************"
+echo "installing zmap**********************"
 sudo apt-get install zmap
 
-echo "installing go ******************************************************************"
-cd $HOME || exit
-sudo apt-get install -y golang-go
-export GOROOT=/usr/lib/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-source .bashrc
+echo "installing go *************************"
+sudo apt-get install -y golang-go && export GO111MODULE="auto"
 
-pf=$(find /usr/share/doc/ -type d -name "zmap")
-cd $pf || exit
-cd examples || exit
-
-echo "installing zgrab2 *************************************************************"
-sudo go install github.com/zmap/zgrab2@latest
-cd || exit
-pF=$(find /usr/share/doc/ -type d -name "zgrab2@v0.1.7")
-echo "**************************** " + $pF + " ********************************"
-cd $pF || exit
-sudo go get $GOP
+echo "installing zgrab2 *******************"
+sudo apt install golang-go make zmap -y && go get github.com/zmap/zgrab2 gopkg.in/mgo.v2 && export GOPATH=$(go env GOPATH)
+cd $GOPATH/src/github.com/zmap/zgrab2 && make

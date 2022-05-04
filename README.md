@@ -1,5 +1,7 @@
 # Zmap Reporter
 
+https://github.com/dmruss/ZmapReporter
+
 ## Program Description
 
 Zmap Reporter is a wrapper for the Zmap, Zgrab, and Nmap which gives cyber security professionals quick access to usable and understable data from whole internet security scans.  This tool adds several functions on top of the existing functionality of Zmap:
@@ -13,12 +15,12 @@ Zmap Reporter is a wrapper for the Zmap, Zgrab, and Nmap which gives cyber secur
 
 Required: This program currently only runs on Unix based operating systems and was designed specifically for use with Kali Linux.
 
+DISCLAIMER: This program does do potentially invasive scans of remote devices.  Use your best judgement when performing network discovery and malware detection scans.  This project takes no responsiblity for your use of the program.  This program is for research and defensive purposes only.
+
 Here is an example scan report:
 ![Scan Report](./docs/exampleReport.png)
 
-### Program Flow
-
-This program is wrapper for Zmap, Zgrab, and Nmap for creating datasets and generating plots for whole internet security scans.  Once the user enters input parameters for port, sample, and scan size this initiates a scan by Zmap.  Zmap unusually fast at doing network discovery scans like this and with the proper internet bandwidth can scan the entire IPv4 space in under an hour.  It was chosen as the network discovery portion of this program for that purpose.  
+This program is wrapper for Zmap, Zgrab, and Nmap for creating datasets and generating plots for whole internet security scans and its steps are as follows.  Once the user enters input parameters for port, sample, and scan size this initiates a scan by Zmap.  Zmap unusually fast at doing network discovery scans like this and with the proper internet bandwidth can scan the entire IPv4 space in under an hour.  It was chosen as the network discovery portion of this program for that purpose.  
 
 After Zmap discovers a list of IPv4 addresses which are currently open on the selected port, that list is input into various Zgrab banner grab scans.  These scans are modules in the Zgrab program.  Each modules run a different scan to detect different services running on an ip address.  This program runs scans looking for services including:
  - SSH servers 
@@ -76,6 +78,7 @@ All outputs generated during a scan will be found in the 'output' folder in the 
 
 Within that scan directory, the report will be saved in the 'final_output' directory, the banner datasets will be in the 'banners' directory, and the malware scans will be in the 'nmapscans' directory.
 
+An example output can be seen in the exampleOutput directory.
 The example below shows the output for a scan of port 80 on May 3, 2022 at 5:20 pm.
 
         Root
@@ -112,6 +115,7 @@ The example below shows the output for a scan of port 80 on May 3, 2022 at 5:20 
 
 ## Examples
 
+There are example screenshots of the program in the Screenshots.pdf file under the docs directory.
 Below is an example of a scan for 5 addresses with port 80 open.  The user selects a 'small' scan meaning that 1 address will be scanned for malware.
 ```
 >python3 zmapReporter.py
@@ -150,8 +154,9 @@ May 03 15:45:16.849 [INFO] zmap: output module: csv
 
  - Zmap - https://github.com/zmap/zmap/blob/main/INSTALL.md 
  - Zgrab2 - https://github.com/zmap/zgrab2 
+ - Nmap for malware script scans - https://nmap.org/ 
  - Jackbox post on zmap/zgrab setup - https://noirth.com/threads/zmap-on-ubuntu.7714/ 
  - Ryan Stewart's article on GeoPandas - https://towardsdatascience.com/geopandas-101-plot-any-data-with-a-latitude-and-longitude-on-a-map-98e01944b972
  - Github's gitignore repo - https://github.com/github/gitignore/blob/main/Python.gitignore 
  - World map shapefile - https://public.opendatasoft.com/explore/dataset/world-administrative-boundaries/export/ 
- - Nmap for malware script scans - https://nmap.org/ 
+ 

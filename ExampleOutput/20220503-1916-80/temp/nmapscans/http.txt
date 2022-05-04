@@ -1,0 +1,42 @@
+# Nmap 7.92 scan initiated Tue May  3 19:20:25 2022 as: nmap --host-timeout 2m -sV --script=http-malware-host -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/http.txt --append-output 38.54.228.25
+Nmap scan report for 38.54.228.25
+Host is up (0.056s latency).
+Not shown: 997 filtered tcp ports (no-response), 1 filtered tcp ports (host-unreach)
+PORT   STATE  SERVICE    VERSION
+53/tcp closed domain
+80/tcp open   tcpwrapped
+|_http-malware-host: Host appears to be clean
+|_http-server-header: nginx
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:21:51 2022 -- 1 IP address (1 host up) scanned in 86.01 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:21:51 2022 as: nmap --host-timeout 2m -sV --script=http-malware-host -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/http.txt --append-output 154.12.194.175
+Nmap scan report for 154.12.194.175
+Host is up (0.12s latency).
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE  SERVICE    VERSION
+53/tcp   closed domain
+80/tcp   open   http-proxy Squid http proxy 3.5.20
+|_http-malware-host: Host appears to be clean
+|_http-server-header: squid/3.5.20
+3128/tcp open   http-proxy Squid http proxy 3.5.20
+|_http-server-header: squid/3.5.20
+|_http-malware-host: Host appears to be clean
+8000/tcp open   http-proxy Squid http proxy 3.5.20
+|_http-server-header: squid/3.5.20
+|_http-malware-host: Host appears to be clean
+8080/tcp open   http-proxy Squid http proxy 3.5.20
+|_http-server-header: squid/3.5.20
+|_http-malware-host: Host appears to be clean
+8800/tcp open   http-proxy Squid http proxy 3.5.20
+|_http-server-header: squid/3.5.20
+|_http-malware-host: Host appears to be clean
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:22:33 2022 -- 1 IP address (1 host up) scanned in 41.78 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:22:33 2022 as: nmap --host-timeout 2m -sV --script=http-malware-host -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/http.txt --append-output 45.60.114.180
+Nmap scan report for 45.60.114.180
+Host is up (0.18s latency).
+Skipping host 45.60.114.180 due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:24:33 2022 -- 1 IP address (1 host up) scanned in 120.88 seconds

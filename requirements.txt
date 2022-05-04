@@ -4,3 +4,4 @@ numpy==1.22.3
 ip2geotools==0.1.6
 geopandas==0.10.2
 geopy==2.2.0
+seaborn==0.11.2

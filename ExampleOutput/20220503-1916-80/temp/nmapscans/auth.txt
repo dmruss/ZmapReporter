@@ -1,0 +1,42 @@
+# Nmap 7.92 scan initiated Tue May  3 19:29:25 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/auth.txt --append-output 104.102.70.85
+Nmap scan report for a104-102-70-85.deploy.static.akamaitechnologies.com (104.102.70.85)
+Host is up (0.14s latency).
+Not shown: 991 filtered tcp ports (no-response), 6 filtered tcp ports (host-unreach)
+PORT    STATE  SERVICE  VERSION
+53/tcp  closed domain
+80/tcp  open   http     AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+443/tcp open   ssl/http AkamaiGHost (Akamai's HTTP Acceleration/Mirror service)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:31:01 2022 -- 1 IP address (1 host up) scanned in 95.69 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:31:01 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/auth.txt --append-output 104.66.76.95
+Nmap scan report for a104-66-76-95.deploy.static.akamaitechnologies.com (104.66.76.95)
+Host is up (0.26s latency).
+Skipping host a104-66-76-95.deploy.static.akamaitechnologies.com (104.66.76.95) due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:33:02 2022 -- 1 IP address (1 host up) scanned in 120.86 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:33:02 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/auth.txt --append-output 198.244.88.250
+Nmap scan report for 198.244.88.250
+Host is up (0.29s latency).
+Skipping host 198.244.88.250 due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:35:03 2022 -- 1 IP address (1 host up) scanned in 120.98 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:35:03 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/auth.txt --append-output 133.162.209.72
+Nmap scan report for 133.162.209.72
+Host is up (0.17s latency).
+Not shown: 996 filtered tcp ports (no-response), 2 filtered tcp ports (host-unreach)
+PORT   STATE  SERVICE VERSION
+53/tcp closed domain
+80/tcp open   http    Apache httpd 2.2.15 ((Red Hat))
+|_http-server-header: Apache/2.2.15 (Red Hat)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:36:42 2022 -- 1 IP address (1 host up) scanned in 99.49 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:36:42 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/auth.txt --append-output 45.60.114.180
+Nmap scan report for 45.60.114.180
+Host is up (0.40s latency).
+Skipping host 45.60.114.180 due to host timeout
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May  3 19:38:43 2022 -- 1 IP address (1 host up) scanned in 120.60 seconds
+# Nmap 7.92 scan initiated Tue May  3 19:38:43 2022 as: nmap --host-timeout 2m -sV --script=auth-spoof -oN /home/guest/CyberProjects/ZmapReporter/output/20220503-1916-80/temp/nmapscans/auth.txt --append-output 77.68.82.252
+# Nmap done at Tue May  3 19:38:46 2022 -- 1 IP address (0 hosts up) scanned in 3.38 seconds

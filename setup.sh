@@ -19,6 +19,7 @@ echo "installing zmap**********************"
 sudo apt-get install zmap
 
 echo "installing go *************************"
+pip install ip2geotools
 sudo apt-get install -y golang-go && export GO111MODULE="auto"
 
 echo "installing zgrab2 *******************"

@@ -1,32 +1,39 @@
-#! /bin/sh
+#!/bin/sh
 
 #setup file
-sudo apt-get update
+echo "Beginning Installation"
+#sudo apt-get update
 
 #install python
-neg = " no "
-path = which python3
-if neg in path:
-  sudo apt-get install python3
+echo "installing python3 *************************************************************"
+sudo apt-get install python3
 
 #install python dependencies
 pip install -r requirements.txt
 
 ##also install zmap and zgrab
-path = which zmap
-if neg in path:
-  sudo apt-get install zmap
-path = which go
-if neg in path:
-  sudo apt-get install golang-go
+echo "installing nmap ****************************************************************"
+sudo apt-get install nmap
+
+echo "installing zmap ****************************************************************"
+sudo apt-get install zmap
+
+echo "installing go ******************************************************************"
+cd $HOME || exit
+sudo apt-get install -y golang-go
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+source .bashrc
+
+pf=$(find /usr/share/doc/ -type d -name "zmap")
+cd $pf || exit
+cd examples || exit
+
+echo "installing zgrab2 *************************************************************"
+sudo go install github.com/zmap/zgrab2@latest
 cd || exit
-mkdir ZmapReporter
-cd ZmapReporter || exit
-path = which zgrab2
-if neg in path:
-  sudo go get github.com/zmap/zgrab2
-cd || exit
-path = find ~ -type d -name "zgrab2@v0.1.7"
-cd path || exit
-sudo go get github.com/stretchr/testify
-make
+pF=$(find /usr/share/doc/ -type d -name "zgrab2@v0.1.7")
+echo "**************************** " + $pF + " ********************************"
+cd $pF || exit
+sudo go get $GOP

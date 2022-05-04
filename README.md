@@ -2,9 +2,9 @@
 
 ## Program Description
 
-Zmap Reporter is a wrapper for the Zmap Internet Scanner which gives cyber security professionals quick access to usable and understable data from whole internet security scans.  This tool adds several functions on top of the existing functionality of Zmap:
+Zmap Reporter is a wrapper for the Zmap, Zgrab, and Nmap which gives cyber security professionals quick access to usable and understable data from whole internet security scans.  This tool adds several functions on top of the existing functionality of Zmap:
  
- - Built in integration with Zgrab, the banner grabbing utility
+ - Built in Zmap integration with Zgrab, the banner grabbing utility
  - Automation of various scans and banner grabs with Zgrab
  - Add geolocation information to dataset
  - Banner parsing and dataset generation 
@@ -13,7 +13,35 @@ Zmap Reporter is a wrapper for the Zmap Internet Scanner which gives cyber secur
 
 Required: This program currently only runs on Unix based operating systems and was designed specifically for use with Kali Linux.
 
+Here is an example scan report:
 ![Scan Report](./docs/exampleReport.png)
+
+### Program Flow
+
+This program is wrapper for Zmap, Zgrab, and Nmap for creating datasets and generating plots for whole internet security scans.  Once the user enters input parameters for port, sample, and scan size this initiates a scan by Zmap.  Zmap unusually fast at doing network discovery scans like this and with the proper internet bandwidth can scan the entire IPv4 space in under an hour.  It was chosen as the network discovery portion of this program for that purpose.  
+
+After Zmap discovers a list of IPv4 addresses which are currently open on the selected port, that list is input into various Zgrab banner grab scans.  These scans are modules in the Zgrab program.  Each modules run a different scan to detect different services running on an ip address.  This program runs scans looking for services including:
+ - SSH servers 
+ - HTTP servers
+ - FTP servers 
+ - TLS servers 
+ - MySql servers  
+ The banners from these scans are grabbed and saved as json files.
+
+The json files output by Zgrab are then parsed by new code specific to Zmap Reporter.  This parsing is based on previously identified useful fields that can help users better understand a network.  Some of these fields include TLS certificate owner, http server sofware, SSH server software, FTP server software, and http redirects.  After parsing, each ip address has its geolocation queried to generate a geographic dataframe.  All parsed data is output as usable csv datasets.
+
+Next, a subset of ip addresses are scanned for malware.  This is done using Nmap's script engine.  The Nmap script engine contains many different categories of scripts which can be run against agents during a scan.  A select subset of scripts from the malware category are chosen to be run against a subset of ip addresses. The malware scans include:
+ - Scan for spoofed replies - Checking if an auth server will respond before a query is completed.
+ - ProFTP backdoor exploit scan  -  Checks for an open backdoor in the ProFTPD server software using the ```id``` command.
+ - VsFTP backdoor exploit scan  -  Checks for an open backdoor in the vsFTPD server software using the ```id``` command.
+ - Zombie server scan  -  Checks if a webserver has been converted to a zombie botnet.
+ - SMTP unexpected port scan  -  Checks if an SMTP mail server is running on a port besides 21, which may indicate someone has compromised the machine.
+ - SMB Double Pulsar backdoor scan  -  Checks if a machine has been compromised by the DoublePulsar backdoor implant developed by the NSA.
+ The subset of ip addresses are chosen based on criteria from the parsed banners. For instance, for the Zombie server scan, machines with open port 80 are chosen as they are more likely to be a web server.  FTP based scans are only completed on ip addresses identified as having an FTP server running on an open port.  
+ 
+ The Nmap scans generate txt file outputs which are saved to the temp folder.  These text files are then parsed by the Zmap Reporter parser and dataframes are generated based and saved to the nmapscans output folder.
+
+ Finally, the plotting function reads in the datasets output by the parser.  The plotting function then creates plots using the Matplotlib and geoPandas library.  These plots are then output as a pdf report in the output folder.
 
 ## Setup
 
@@ -101,6 +129,7 @@ May 03 15:45:16.849 [INFO] zmap: output module: csv
  .....
  (until completion)
 ```
+
 ## References
 
  - Zmap - https://github.com/zmap/zmap/blob/main/INSTALL.md 

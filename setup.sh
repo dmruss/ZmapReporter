@@ -24,6 +24,6 @@ pip install ip2geotools
 sudo apt-get install -y golang-go && export GO111MODULE="auto"
 
 echo "installing zgrab2 *******************"
-sudo apt install golang-go make zmap -y && go get github.com/zmap/zgrab2 gopkg.in/mgo.v2 && export GOPATH=$(go env GOPATH)
+sudo apt install golang-go make zmap -y && go get github.com/zmap/zgrab2 && export GOPATH=$(go env GOPATH)
 cd $GOPATH/src/github.com/zmap/zgrab2 && make
 echo "installation complete *******************"

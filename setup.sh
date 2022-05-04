@@ -1,3 +1,4 @@
+=======
 #!/bin/sh
 
 #setup file
@@ -36,4 +37,6 @@ cd || exit
 pF=$(find /usr/share/doc/ -type d -name "zgrab2@v0.1.7")
 echo "**************************** " + $pF + " ********************************"
 cd $pF || exit
-sudo go get $GOP
+sudo go get $GOPATH github.com/stretchr/testify
+sudo make 
+

@@ -29,7 +29,7 @@ class ZmapReporter:
         os.system('mkdir {}'.format(self.working_dir+'/banners'))
         os.system('mkdir {}'.format(self.working_dir+'/nmapscans'))
         os.system('mkdir {}'.format(self.working_dir+'/final_output'))
-        self.zgrab_dir = '~/go/pkg/mod/github.com/zmap/zgrab2@v0.1.7/zgrab2'
+        self.zgrab_dir = '~/go/src/github.com/zmap/zgrab2/zgrab2'
 
 
     def zmap(self):
